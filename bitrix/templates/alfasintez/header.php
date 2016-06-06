@@ -67,10 +67,10 @@ $curPage = $APPLICATION->GetCurPage(true);
                         "bitrix:main.include",
                         "",
                         Array(
-                            "AREA_FILE_SHOW" => "telephone",
-                            "AREA_FILE_SUFFIX" => "",
-                            "AREA_FILE_RECURSIVE" => "Y",
-                            "EDIT_TEMPLATE" => ".content.php"
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "standard.php",
+                            "PATH" => "/include/telephone.php"
                         )
                     );?>
                 </div>
@@ -80,6 +80,29 @@ $curPage = $APPLICATION->GetCurPage(true);
             </div>
         </div>
     </div>
+
+    <div id="main-menu" class="container">
+        <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "2",
+		"CHILD_MENU_TYPE" => "",
+		"USE_EXT" => "N",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
+    </div>
+
+
 
     <div id="navigation" class="container">
         <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", array(
@@ -91,3 +114,6 @@ $curPage = $APPLICATION->GetCurPage(true);
             Array('HIDE_ICONS' => 'Y')
         );?>
     </div>
+
+    <div id="content" class="container">
+

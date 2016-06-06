@@ -1,3 +1,4 @@
+</div>
 <div id="footer-wrapper" class="container">
     <div class="row">
         <div class="phone-wrapper">

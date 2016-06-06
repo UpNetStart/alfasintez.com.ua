@@ -8,4 +8,4 @@ $aMenuLinks = Array(
 		""
 	)
 );
-?>
+?>w
