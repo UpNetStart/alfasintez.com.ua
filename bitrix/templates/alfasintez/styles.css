@@ -2,6 +2,10 @@
 body{
     font-size: 16px;
 }
+
+#wrapper{
+    font-size:1em;
+}
 /*---------- END TYPO ----------*/
 /*---------- HEADER BLOCK ----------*/
 .menu-items > .row > ul > li > a { display: block }
@@ -13,10 +17,6 @@ body{
 
 #logo{
     display: block;
-    background-image: url('images/main-elements/logo.png');
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 132px;
 }
 
 
@@ -26,8 +26,8 @@ body{
 /*---------- CONTENT BLOCK ----------*/
 
 .catalog-section-list > ul > li > a > h4{  }
-.catalog-section-list > ul > li{ list-style: none; text-align: center; }
-.main_category_img{}
+.catalog-section-list > ul > li { list-style: none; text-align: center; }
+.main_category_img{ width: 80%; height: auto}
 .main_category_link{
     display: block;
     text-decoration: none;

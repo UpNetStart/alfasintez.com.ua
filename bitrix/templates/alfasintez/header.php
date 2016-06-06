@@ -42,34 +42,33 @@ $curPage = $APPLICATION->GetCurPage(true);
             <div class="row top-items">
                     <div id="top-menu" class="container">
                         <?$APPLICATION->IncludeComponent(
-                            "bitrix:menu",
-                            "top_menu",
-                            array(
-                                "ROOT_MENU_TYPE" => "top",
-                                "MENU_CACHE_TYPE" => "A",
-                                "MENU_CACHE_TIME" => "3600",
-                                "MENU_CACHE_USE_GROUPS" => "Y",
-                                "MENU_CACHE_GET_VARS" => array(
-                                ),
-                                "MAX_LEVEL" => "2",
-                                "CHILD_MENU_TYPE" => "",
-                                "USE_EXT" => "N",
-                                "DELAY" => "N",
-                                "ALLOW_MULTI_SELECT" => "N"
-                            ),
-                            false
-                        );?>
+	"bitrix:menu", 
+	"top-elements", 
+	array(
+		"ROOT_MENU_TYPE" => "top-elements",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "top-elements",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
                     </div>
             </div>
 
             <div class="header-contents">
                 <div class="row">
-                <div class="logo-wrapper col-sm-2">
-                    <a href="/" id="logo">
-                    </a>
+                <a href="/" id="logo" class="logo-wrapper col-sm-3 col-md-3 col-lg-3 col-xs-3">
+                        <img src="<?php echo SITE_TEMPLATE_PATH ?>/images/main-elements/logo.png" alt="">
                 </div>
 
-                <div class="phone col-sm-3">
+                <div class="phone col-sm-3 col-md-3 col-lg-3 col-xs-3">
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:main.include",
                         "",
@@ -81,8 +80,6 @@ $curPage = $APPLICATION->GetCurPage(true);
                         )
                     );?>
                 </div>
-
-
                 </div>
             </div>
         </div>
@@ -90,23 +87,23 @@ $curPage = $APPLICATION->GetCurPage(true);
 
     <div id="main-menu" class="container">
         <?$APPLICATION->IncludeComponent(
-            "bitrix:menu",
-            "top-elements",
-            array(
-                "ROOT_MENU_TYPE" => "top",
-                "MENU_CACHE_TYPE" => "A",
-                "MENU_CACHE_TIME" => "3600",
-                "MENU_CACHE_USE_GROUPS" => "Y",
-                "MENU_CACHE_GET_VARS" => array(
-                ),
-                "MAX_LEVEL" => "2",
-                "CHILD_MENU_TYPE" => "",
-                "USE_EXT" => "N",
-                "DELAY" => "N",
-                "ALLOW_MULTI_SELECT" => "N"
-            ),
-            false
-        );?>
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "",
+		"USE_EXT" => "N",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
     </div>
 
 
