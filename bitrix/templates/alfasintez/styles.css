@@ -4,21 +4,26 @@ body{
 }
 /*---------- END TYPO ----------*/
 /*---------- HEADER BLOCK ----------*/
-.bluer{
-    background: #fafcfd none repeat scroll 0 0;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 1px 2px 0 rgba(56, 94, 104, 0.26);
-    color: #576e75;
-    float: right;
-    line-height: 44px;
-    margin-bottom: 14px;
-    padding: 0;
-    vertical-align: middle;
-    white-space: nowrap;
-}
-
 .menu-items > .row > ul > li > a { display: block }
 .menu-items > .row > ul > li { display: inline-block; }
+
+#header-wrapper{
+    background: rgba(255, 255, 255, 1) url("images/main-elements/header-bg.png") repeat scroll 0 0; 
+}
+
+#logo{
+    display: block;
+    background-image: url('images/main-elements/logo.png');
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 132px;
+}
+
+.phone{
+    width: 150px;
+}
+
+
 /*---------- END HEADER BLOCK ----------*/
 
 /*---------- CONTENT BLOCK ----------*/
