@@ -19,6 +19,8 @@ $curPage = $APPLICATION->GetCurPage(true);
     $APPLICATION->ShowCSS(true, true);
     ?>
     <link rel="stylesheet" type="text/css" href="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH."/colors.css")?>" />
+    <link rel="stylesheet" type="text/css" href="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH."/bootstrap.css")?>" />
+
     <?
     $APPLICATION->ShowHeadStrings();
     $APPLICATION->ShowHeadScripts();
@@ -28,20 +30,21 @@ $curPage = $APPLICATION->GetCurPage(true);
 </head>
 
 <body>
+<div id="panel clearfix"><?$APPLICATION->ShowPanel();?></div>
 
-<div id="panel"><?$APPLICATION->ShowPanel();?></div>
 
-<div class="header_top_section_container_two">
-    <?$APPLICATION->IncludeComponent('bitrix:menu', "top_menu", array(
-            "ROOT_MENU_TYPE" => "top",
-            "MENU_CACHE_TYPE" => "Y",
-            "MENU_CACHE_TIME" => "36000000",
-            "MENU_CACHE_USE_GROUPS" => "Y",
-            "MENU_CACHE_GET_VARS" => array(),
-            "MAX_LEVEL" => "1",
-            "USE_EXT" => "N",
-            "ALLOW_MULTI_SELECT" => "N"
-        )
-    );?>
+<div class="wrapper">
+<div id="header-wrapper" class="container">
+    <div class="row top-items">
+        <div class="lang-wrapper bluer col-lg-3">
+            <a class="bluer-link" href="#">Русский(RU)</a>
+            <a class="bluer-link" href="#">English(EN)</a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <a href="#" class="logo-link">
+            <img src="images/main-elements/header-bg.png" alt="ООО Альфа Синтез" class="logo">
+        </a>
+    </div>
 </div>
-<div class="clb"></div>

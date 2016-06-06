@@ -17,7 +17,7 @@ if (empty($arResult))
 ?>
 
 <ul class="bx_topnav">
-<?foreach($arResult as $itemIdex => $arItem):?>
-	<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
-<?endforeach;?>
+	<?foreach($arResult as $itemIdex => $arItem):?>
+		<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+	<?endforeach;?>
 </ul>
