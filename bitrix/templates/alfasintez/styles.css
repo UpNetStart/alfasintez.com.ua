@@ -19,14 +19,20 @@ body{
     height: 132px;
 }
 
-.phone{
-    width: 150px;
-}
 
 
 /*---------- END HEADER BLOCK ----------*/
 
 /*---------- CONTENT BLOCK ----------*/
+
+.catalog-section-list > ul > li > a > h4{  }
+.catalog-section-list > ul > li{ list-style: none; text-align: center; }
+.main_category_img{}
+.main_category_link{
+    display: block;
+    text-decoration: none;
+}
+
 /*---------- END CONTENT BLOCK ----------*/
 
 /*---------- FOOTER BLOCK ----------*/

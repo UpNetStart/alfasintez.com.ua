@@ -40,29 +40,36 @@ $curPage = $APPLICATION->GetCurPage(true);
     <div id="header-wrapper" class="container-fluid clearfix">
         <div class="container">
             <div class="row top-items">
-                <div class="lang-wrapper bluer">
-                    <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	".default",
-	array(
-		"AREA_FILE_SHOW" => "sect",
-		"AREA_FILE_SUFFIX" => "inc",
-		"AREA_FILE_RECURSIVE" => "Y",
-		"EDIT_TEMPLATE" => "standard.php"
-	),
-	false
-);?>
-                </div>
+                    <div id="top-menu" class="container">
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "top_menu",
+                            array(
+                                "ROOT_MENU_TYPE" => "top",
+                                "MENU_CACHE_TYPE" => "A",
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "MENU_CACHE_GET_VARS" => array(
+                                ),
+                                "MAX_LEVEL" => "2",
+                                "CHILD_MENU_TYPE" => "",
+                                "USE_EXT" => "N",
+                                "DELAY" => "N",
+                                "ALLOW_MULTI_SELECT" => "N"
+                            ),
+                            false
+                        );?>
+                    </div>
             </div>
 
             <div class="header-contents">
                 <div class="row">
-                <div class="logo-wrapper col-lg-2">
+                <div class="logo-wrapper col-sm-2">
                     <a href="/" id="logo">
                     </a>
                 </div>
 
-                <div class="phone col-lg-2">
+                <div class="phone col-sm-3">
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:main.include",
                         "",
@@ -83,25 +90,24 @@ $curPage = $APPLICATION->GetCurPage(true);
 
     <div id="main-menu" class="container">
         <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"top_menu", 
-	array(
-		"ROOT_MENU_TYPE" => "top",
-		"MENU_CACHE_TYPE" => "A",
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MAX_LEVEL" => "2",
-		"CHILD_MENU_TYPE" => "",
-		"USE_EXT" => "N",
-		"DELAY" => "N",
-		"ALLOW_MULTI_SELECT" => "N"
-	),
-	false
-);?>
+            "bitrix:menu",
+            "top-elements",
+            array(
+                "ROOT_MENU_TYPE" => "top",
+                "MENU_CACHE_TYPE" => "A",
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "MENU_CACHE_GET_VARS" => array(
+                ),
+                "MAX_LEVEL" => "2",
+                "CHILD_MENU_TYPE" => "",
+                "USE_EXT" => "N",
+                "DELAY" => "N",
+                "ALLOW_MULTI_SELECT" => "N"
+            ),
+            false
+        );?>
     </div>
-
 
 
     <div id="navigation" class="container">

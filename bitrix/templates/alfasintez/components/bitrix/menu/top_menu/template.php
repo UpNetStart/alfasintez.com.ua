@@ -16,7 +16,7 @@ if (empty($arResult))
 	return;
 ?>
 
-<ul class="bx_topnav">
+<ul class="bx_topnav main-menu">
 	<?foreach($arResult as $itemIdex => $arItem):?>
 		<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
 	<?endforeach;?>
