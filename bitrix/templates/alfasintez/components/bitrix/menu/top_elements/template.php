@@ -1,7 +1,7 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 <?if (!empty($arResult)):?>
-<ul class="top-menu">
+<ul class="top-elements">
 
 <?
 foreach($arResult as $arItem):
