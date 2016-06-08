@@ -1,11 +1,21 @@
 /*---------- TYPO ----------*/
 body{
     font-size: 16px;
+    min-width: 1150px;
 }
 
 #wrapper{
     font-size:1em;
-    min-width: 786px;
+}
+
+@font-face {
+    font-family: PDD-itl; /* Имя шрифта */
+    src: url(fonts/pfdindisplaypro-italic.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: PDD-black; /* Имя шрифта */
+    src: url(fonts/pfdindisplaypro-bold.ttf); /* Путь к файлу со шрифтом */
 }
 /*---------- END TYPO ----------*/
 /*---------- HEADER BLOCK ----------*/
@@ -13,6 +23,8 @@ body{
 
 .menu-items > .row > ul > li > a { display: block }
 .menu-items > .row > ul > li { display: inline-block; }
+
+
 
 #header-wrapper{
     background: rgba(255, 255, 255, 1) url("images/main-elements/header-bg.png") repeat scroll 0 0;
@@ -69,6 +81,32 @@ body{
     background: #ff740a url("images/main-elements/menu-wrapper.png") repeat scroll 0 0 / 100% auto;
     height:3px;
 }
+
+.menu-item.current > a {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 -6px 0 -1px rgba(16, 202, 255, 1);
+}
+
+.menu-item > a:hover{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #01465A;
+}
+
+.menu-item > a {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    display: block;
+    font-family: PDD-black;
+    font-size: 1.2em;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+}
 /*---------- END MAIN MENU ----------*/
 
 
@@ -92,28 +130,54 @@ body{
     padding: 0 10px;
 }
 
-.phone > p{
-    font-size: 150%;
-}
 
-.phone.pull-left{
+.phone-header p{
+    margin-bottom: 0;
+}
+.phone-header.pull-left{
+    font-family: PDD-itl;
+    font-weight:bold;
     margin-left: 5%;
+    font-size: 150%;
+    color: #0078a6;
+    margin-top: 1%;
 }
 
 .top-menu{
     margin-left: 2%;
 }
+
+
 /*---------- END HEADER BLOCK ----------*/
 
 /*---------- CONTENT BLOCK ----------*/
+#content{
+    margin-bottom: 1%;
+}
+
+
 
 .catalog-section-list > ul > li > a > h4{  }
 .catalog-section-list > ul > li { list-style: none; text-align: center; }
 .catalog-section-list > ul  { margin: 0; padding: 0; }
 .main_category_img{ width: 65%; height: auto}
+.main_category_link:hover{
+    opacity: 1;
+    text-decoration: none;
+}
 .main_category_link{
+    opacity: 0.8;
     display: block;
     text-decoration: none;
+}
+
+.about-wrapper{
+    background: rgba(0, 0, 0, 0) url("images/lightblue_bg.png") repeat scroll 0 0;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.25) inset, 0 12px 11px -10px rgba(0, 0, 0, 0.2) inset;
+}
+
+.product-title{
+    font-size: 150%;
 }
 
 /*---------- END CONTENT BLOCK ----------*/
@@ -121,6 +185,19 @@ body{
 /*---------- FOOTER BLOCK ----------*/
 #footer-wrapper{
     background: rgba(255, 255, 255, 1) url("images/main-elements/header-bg.png") repeat scroll 0 0;
+    text-align: left;
+}
+
+.lang-menu{
+    font-size: 90% !important;
+}
+
+.footer-content, .footer-mail, .lang-menu, .footer-address  p{
+    color: #ff9b08 !important;
+    font-family: PDD-itl;
+    font-size: 105%;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .footer-sep-blue{
@@ -136,13 +213,52 @@ body{
     width: 100%;
 }
 
-.footer-content > div{
-    display: inline-block;
-    text-align: center;
+.footer-content{
+    position: relative;
+    padding-top: 10px;
 }
 
 .copy{
-    display: block !important;
-    text-align: center;
+    position: relative;
+    color: rgba(6, 104, 174, 0.7);
+    font-size: 75% !important;
+    font-weight:bold;
+    text-align: center !important;
+
+    text-decoration: none;
+    bottom: 0;
 }
+
+.footer-contacts{
+    padding-left:3%;
+}
+
+.footer-mail, .footer-address{
+    width: auto !important;
+}
+
+.phone-footer{
+    width: 275px;
+    margin-top:5%;
+}
+
+.footer-mail {
+    margin-top: 2%;
+    width: auto;
+}
+
+.footer-map img{
+    -webkit-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.75);
+}
+.footer-map{
+    width:350px;
+    height: 110px;
+    margin-top:-5.5%;
+    margin-right:0.5%;
+    overflow: hidden;
+}
+
+
 /*---------- END FOOTER BLOCK ----------*/

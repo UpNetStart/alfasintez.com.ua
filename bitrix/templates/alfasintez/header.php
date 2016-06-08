@@ -38,11 +38,12 @@ $curPage = $APPLICATION->GetCurPage(true);
 <div class="wrapper clearfix">
 
     <div id="header-wrapper" class="container-fluid clearfix">
-            <div class="container">
+        <div class="row">
+        <div class="container">
                 <div class="top-items row">
                     <a href="/" id="logo" class="logo-wrapper pull-left">
-                            <img class="logo-img" src="<?php echo SITE_TEMPLATE_PATH ?>/images/main-elements/logo.png" alt="">
-                        </a>
+                        <img class="logo-img" src="<?php echo SITE_TEMPLATE_PATH ?>/images/main-elements/logo.png" alt="">
+                    </a>
 
                     <div class="top-menu header-elements-wrapper pull-left">
                             <? // Меню - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/menu.php
@@ -69,7 +70,7 @@ $curPage = $APPLICATION->GetCurPage(true);
                                 )
                             ); ?>
                         </div>
-                    <div class="phone pull-left">
+                    <div class="phone-header pull-left">
                         <?
                         // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
                         $APPLICATION->IncludeComponent(
@@ -119,6 +120,21 @@ $curPage = $APPLICATION->GetCurPage(true);
                             )
                         );
                         ?>
+
+                        <?if ($APPLICATION->GetCurPage(true) == SITE_DIR."index.php"):?>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                Array(
+                                    "AREA_FILE_SHOW" => "sect",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "AREA_FILE_RECURSIVE" => "N",
+                                    "EDIT_MODE" => "html",
+                                ),
+                                false,
+                                Array('HIDE_ICONS' => 'Y')
+                            );?>
+                        <?endif?>
                     </div>
                     <div class="search pull-right">
                         <?$APPLICATION->IncludeComponent("bitrix:search.title", "main-searching", array(
@@ -151,6 +167,7 @@ $curPage = $APPLICATION->GetCurPage(true);
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 
     <div class="menu-bg container-fluid clearfix">
@@ -177,8 +194,8 @@ $curPage = $APPLICATION->GetCurPage(true);
         </div>
     </div>
 
+
     <div id="navigation" class="container">
-        <div class="row">
             <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", array(
                 "START_FROM" => "0",
                 "PATH" => "",
@@ -187,5 +204,4 @@ $curPage = $APPLICATION->GetCurPage(true);
                 false,
                 Array('HIDE_ICONS' => 'Y')
             );?>
-        </div>
     </div>

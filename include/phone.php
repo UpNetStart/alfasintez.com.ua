@@ -1,4 +1,4 @@
-<div class="phone">
+<div class="phone-header">
     <p>+38 (097) 296 61 06</p>
     <p>+38 (0562) 35 00 26</p>
     <p>+38 (067) 631 32 23</p>

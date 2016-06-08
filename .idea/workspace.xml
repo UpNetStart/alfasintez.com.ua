@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61d9ac78-3e14-4292-a95c-070992928293" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/footer.inc.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/catalog_native/images/icon_cart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/catalog_native/images/icon_notive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/catalog_native/images/menu-avatar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/catalog_native/images/panel_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/catalog_native/images/test-avatar-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/catalog_native/result_modifier.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/catalog_native/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/catalog_native/template.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/include/facebook_plugin.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/images/footer-map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/images/lightblue_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/images/mail-src.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/images/main-elements/menu-wrapper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/images/map-src.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/images/phone-logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog.section.list/tree/template.php" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog.section.list/tree/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/top_elements/template.php" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/top_elements/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/top_menu/template.php" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/top_menu/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/footer.php" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/header.php" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/about_title.php" afterPath="$PROJECT_DIR$/include/about_title.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/catalog_title.php" afterPath="$PROJECT_DIR$/include/catalog_title.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal/index.php" afterPath="$PROJECT_DIR$/personal/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/index.php" afterPath="$PROJECT_DIR$/search/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/include/telephone.php" afterPath="$PROJECT_DIR$/include/phone.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/footer.inc.php" afterPath="$PROJECT_DIR$/include/footer.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/phone.php" afterPath="$PROJECT_DIR$/include/phone.php" />
     </list>
     <ignored path="alfasintez.com.ua.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +49,7 @@
       <favorite_root url="file://$PROJECT_DIR$/bitrix/templates" module="alfasintez.com.ua" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
         <favorite_root url="file://$PROJECT_DIR$/bitrix/templates/alfasintez/css" module="alfasintez.com.ua" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
           <favorite_root url="file://$PROJECT_DIR$/bitrix/templates/alfasintez/images" module="alfasintez.com.ua" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/bitrix/templates/alfasintez/images/main-elements" module="alfasintez.com.ua" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/bitrix/templates/alfasintez/images" module="alfasintez.com.ua" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
               <favorite_root url="file://$PROJECT_DIR$/bitrix/templates/alfasintez/images/main-elements/petf.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
             </favorite_root>
           </favorite_root>
@@ -456,9 +445,12 @@
           <file leaf-file-name="footer.inc.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/footer.inc.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.923077">
-                  <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-                  <folding />
+                <state vertical-scroll-proportion="-18.961538">
+                  <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+                  <folding>
+                    <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="e#1275#2095#0#PHP" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -466,26 +458,15 @@
           <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/header.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6422764">
-                  <caret line="90" column="60" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
+                <state vertical-scroll-proportion="1.1422764">
+                  <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
                   <folding>
-                    <element signature="n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="e#6027#8135#0#PHP" expanded="false" />
-                    <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#4871#5821#0#PHP" expanded="false" />
+                    <element signature="e#6048#8156#0#PHP" expanded="false" />
+                    <element signature="e#8212#8918#0#PHP" expanded="false" />
+                    <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bitrix/templates/eshop_adapt_blue/header.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-4.1538463">
-                  <caret line="95" column="54" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="54" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -513,9 +494,11 @@
           <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/footer.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.8545455">
-                  <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-                  <folding />
+                <state vertical-scroll-proportion="-2.0181818">
+                  <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+                  <folding>
+                    <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -527,10 +510,17 @@
           <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.76217765">
-                  <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+                <state vertical-scroll-proportion="1.1690544">
+                  <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
                   <folding />
                 </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="footer-map.png" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/images/footer-map.png">
+              <provider selected="true" editor-type-id="images">
+                <state />
               </provider>
             </entry>
           </file>
@@ -600,16 +590,16 @@
         <option value="$PROJECT_DIR$/include/about_title.php" />
         <option value="$PROJECT_DIR$/desktop_app/index.php" />
         <option value="$PROJECT_DIR$/desktop_app/headers.php" />
-        <option value="$PROJECT_DIR$/include/phone.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/top_menu/template.php" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog.section.list/tree/template.php" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/menu/top_elements/template.php" />
         <option value="$PROJECT_DIR$/personal/index.php" />
-        <option value="$PROJECT_DIR$/include/footer.inc.php" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/footer.php" />
-        <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/header.php" />
+        <option value="$PROJECT_DIR$/include/phone.php" />
+        <option value="$PROJECT_DIR$/include/footer.inc.php" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/header.php" />
       </list>
     </option>
   </component>
@@ -688,6 +678,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez.com.ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez.com.ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="bitrix" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -707,6 +711,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez.com.ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez.com.ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez.com.ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez.com.ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez.com.ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez.com.ua" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alfasintez" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main-elements" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -767,13 +849,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\OpenServer\domains\alfasintez.com.ua\bitrix\templates\alfasintez\images" />
       <recent name="E:\OpenServer\domains\alfasintez.com.ua\include" />
       <recent name="E:\OpenServer\domains\alfasintez.com.ua\bitrix\templates\alfasintez\components\bitrix\menu" />
       <recent name="E:\OpenServer\domains\alfasintez.com.ua" />
       <recent name="E:\OpenServer\domains\alfasintez.com.ua\bitrix\templates\alfasintez\css" />
-      <recent name="E:\OpenServer\domains\alfasintez.com.ua\bitrix\templates\alfasintez" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\OpenServer\domains\alfasintez.com.ua\bitrix\templates\alfasintez\images" />
       <recent name="E:\OpenServer\domains\alfasintez.com.ua\bitrix\templates\alfasintez\css" />
     </key>
   </component>
@@ -808,20 +891,20 @@
     <frame x="-1928" y="-314" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15778251" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15298508" sideWeight="0.71128607" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12567714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25460455" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1744312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15778251" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15298508" sideWeight="0.71128607" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12567714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22751896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15298508" sideWeight="0.2887139" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -853,7 +936,8 @@
     <MESSAGE value="catalog category create view" />
     <MESSAGE value="catalog category view rebase" />
     <MESSAGE value="menu entry" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu entry" />
+    <MESSAGE value="heaader complite 90%" />
+    <option name="LAST_COMMIT_MESSAGE" value="heaader complite 90%" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.7238806" />
   </component>
   <component name="XDebuggerManager">
@@ -870,20 +954,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog.section.list/tree/lang/ru/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog.section/category/result_modifier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2347526">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/description.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09781358">
@@ -973,6 +1043,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11363637">
           <caret line="5" column="61" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,6 +1085,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.528302">
           <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,6 +1093,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.3773584">
           <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,6 +1101,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,6 +1123,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,50 +1230,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/phone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/footer.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.923077">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8545455">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog.section.list/tree/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.43396226">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitrix/templates/eshop_adapt_blue/template_styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="316" column="0" selection-start-line="316" selection-start-column="0" selection-end-line="321" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/eshop_adapt_blue/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.1538463">
-          <caret line="95" column="54" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1219,6 +1254,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/eshop_adapt_blue/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7381818">
+          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="165" selection-end-column="21" />
+          <folding>
+            <element signature="e#6140#6412#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.509434">
@@ -1227,26 +1272,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/header.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog.section.list/tree/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6422764">
-          <caret line="90" column="60" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
+        <state vertical-scroll-proportion="-0.43396226">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/phone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0181818">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding>
-            <element signature="n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#6027#8135#0#PHP" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65405405">
+          <caret line="336" column="25" selection-start-line="336" selection-start-column="17" selection-end-line="336" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/images/footer-map.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/footer.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.961538">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1275#2095#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76217765">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state vertical-scroll-proportion="1.1690544">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1422764">
+          <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#4871#5821#0#PHP" expanded="false" />
+            <element signature="e#6048#8156#0#PHP" expanded="false" />
+            <element signature="e#8212#8918#0#PHP" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
