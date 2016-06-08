@@ -1,18 +1,23 @@
-<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
 
-<?if (!empty($arResult)):?>
-<ul class="top-elements">
-
-<?
-foreach($arResult as $arItem):
-	if($arParams["MAX_LEVEL"] == 1 && $arItem["DEPTH_LEVEL"] > 1) 
-		continue;
+if (empty($arResult))
+	return;
 ?>
-	<?if($arItem["SELECTED"]):?>
-		<li><a href="<?=$arItem["LINK"]?>" class="selected"><?=$arItem["TEXT"]?></a></li>
-	<?endif?>
-	
-<?endforeach?>
 
-</ul>
-<?endif?>
+<div class="lang-menu">
+	<?foreach($arResult as $itemIdex => $arItem):?>
+		<span><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></span>
+	<?endforeach;?>
+</div>

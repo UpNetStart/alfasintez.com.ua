@@ -12,12 +12,15 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-if (empty($arResult))
-	return;
+if (empty($arResult)) return;
 ?>
 
-<ul class="bx_topnav main-menu">
-	<?foreach($arResult as $itemIdex => $arItem):?>
-		<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
-	<?endforeach;?>
-</ul>
+<div class="container">
+		<ul class="nav_menu">
+			<?foreach($arResult as $itemIdex => $arItem):?>
+				<li class="menu-item">
+					<a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+				</li>
+			<?endforeach;?>
+		</ul>
+</div>

@@ -38,90 +38,154 @@ $curPage = $APPLICATION->GetCurPage(true);
 <div class="wrapper clearfix">
 
     <div id="header-wrapper" class="container-fluid clearfix">
-        <div class="container">
-            <div class="row top-items">
-                    <div id="top-menu" class="container">
-                        <? // Меню - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/menu.php
+            <div class="container">
+                <div class="top-items row">
+                    <a href="/" id="logo" class="logo-wrapper pull-left">
+                            <img class="logo-img" src="<?php echo SITE_TEMPLATE_PATH ?>/images/main-elements/logo.png" alt="">
+                        </a>
+
+                    <div class="top-menu header-elements-wrapper pull-left">
+                            <? // Меню - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/navigation/menu.php
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:menu",
+                                "top_elements",                  // [bottom_menu, catalog_native, top_menu, .default, blue_tabs, catalog_horizontal, catalog_vertical, grey_tabs, horizontal_multilevel, tree, vertical_multilevel]
+                                array(
+                                    // region Основные параметры
+                                    "ROOT_MENU_TYPE"         =>  "elements",  // Тип меню для первого уровня : array ( 'left' => 'Левое меню', 'top' => 'Верхнее меню', 'bottom' => 'Нижнее меню', )
+                                    // endregion
+                                    // region Настройки кеширования
+                                    "MENU_CACHE_TYPE"        =>  "N",     // Тип кеширования : array ( 'A' => 'Авто', 'Y' => 'Кешировать', 'N' => 'Не кешировать', )
+                                    "MENU_CACHE_TIME"        =>  "3600",  // Время кеширования (сек.)
+                                    "MENU_CACHE_USE_GROUPS"  =>  "Y",     // Учитывать права доступа
+                                    "MENU_CACHE_GET_VARS"    =>  "",      // Значимые переменные запроса
+                                    // endregion
+                                    // region Дополнительные настройки
+                                    "MAX_LEVEL"              =>  "1",     // Уровень вложенности меню : array ( 1 => '1', 2 => '2', 3 => '3', 4 => '4', )
+                                    "CHILD_MENU_TYPE"        =>  "elements",  // Тип меню для остальных уровней : array ( 'left' => 'Левое меню', 'top' => 'Верхнее меню', 'bottom' => 'Нижнее меню', )
+                                    "USE_EXT"                =>  "N",     // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                                    "DELAY"                  =>  "N",     // Откладывать выполнение шаблона меню
+                                    "ALLOW_MULTI_SELECT"     =>  "N",     // Разрешить несколько активных пунктов одновременно
+                                    // endregion
+                                )
+                            ); ?>
+                        </div>
+                    <div class="phone pull-left">
+                        <?
+                        // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
                         $APPLICATION->IncludeComponent(
-                        	"bitrix:menu",
-                        	"top_menu",                  // [bottom_menu, catalog_native, top_menu, .default, blue_tabs, catalog_horizontal, catalog_vertical, grey_tabs, horizontal_multilevel, tree, vertical_multilevel]
-                        	array(        
-                        		// region Основные параметры         
-                        		"ROOT_MENU_TYPE"         =>  "elements",  // Тип меню для первого уровня : array ( 'left' => 'Левое меню', 'top' => 'Верхнее меню', 'bottom' => 'Нижнее меню', )
-                        		// endregion         
-                        		// region Настройки кеширования         
-                        		"MENU_CACHE_TYPE"        =>  "N",     // Тип кеширования : array ( 'A' => 'Авто', 'Y' => 'Кешировать', 'N' => 'Не кешировать', )         
-                        		"MENU_CACHE_TIME"        =>  "3600",  // Время кеширования (сек.)          
-                        		"MENU_CACHE_USE_GROUPS"  =>  "Y",     // Учитывать права доступа          
-                        		"MENU_CACHE_GET_VARS"    =>  "",      // Значимые переменные запроса          
-                        		// endregion         
-                        		// region Дополнительные настройки         
-                        		"MAX_LEVEL"              =>  "1",     // Уровень вложенности меню : array ( 1 => '1', 2 => '2', 3 => '3', 4 => '4', )         
-                        		"CHILD_MENU_TYPE"        =>  "elements",  // Тип меню для остальных уровней : array ( 'left' => 'Левое меню', 'top' => 'Верхнее меню', 'bottom' => 'Нижнее меню', )
-                        		"USE_EXT"                =>  "N",     // Подключать файлы с именами вида .тип_меню.menu_ext.php          
-                        		"DELAY"                  =>  "N",     // Откладывать выполнение шаблона меню          
-                        		"ALLOW_MULTI_SELECT"     =>  "N",     // Разрешить несколько активных пунктов одновременно          
-                        		// endregion 
-                        	)
-                        ); ?>
+                            "bitrix:main.include",
+                            "include_area",
+                            array(
+                                // region Параметры компонента
+                                "AREA_FILE_SHOW"    =>  "file",  // Показывать включаемую область : array ( 'page' => 'для страницы', 'sect' => 'для раздела', )
+                                "AREA_FILE_PATH"  =>  "/include/phone.php",   // Суффикс имени файла включаемой области
+                                "AREA_FILE_SUFFIX"  =>  "",   // Суффикс имени файла включаемой области
+                                "EDIT_TEMPLATE"     =>  "standard.php",      // Шаблон области по умолчанию : array ( 'standard.php' => '[standard.php] Стандартная страница', )
+                                "PATH" => "/include/phone.php"
+                                // endregion
+                            )
+                        );
+                        ?>
                     </div>
-            </div>
 
-            <div class="header-contents">
-                <div class="row">
-                <a href="/" id="logo" class="logo-wrapper col-sm-3 col-md-3 col-lg-3 col-xs-3">
-                        <img class="logo-img" src="<?php echo SITE_TEMPLATE_PATH ?>/images/main-elements/logo.png" alt=""> </a>
-
-
-                <div class="phone col-sm-3 col-md-3 col-lg-3 col-xs-3">
-                    <?$APPLICATION->IncludeComponent(
-                        "bitrix:main.include",
-                        "",
-                        Array(
-                            "AREA_FILE_SHOW" => "file",
-                            "AREA_FILE_SUFFIX" => "inc",
-                            "EDIT_TEMPLATE" => "standard.php",
-                            "PATH" => "/include/telephone.php"
-                        )
-                    );?>
+                    <div class="cart header-elements-wrapper pull-right">
+                        <?
+                        // Ссылка на корзину
+                        $APPLICATION->IncludeComponent(
+                            "bitrix:sale.basket.basket.line",
+                            ".default",               // [eshop_adapt, .default]
+                            array(
+                                //  region Основные параметры
+                                "PATH_TO_BASKET"      =>  "={SITE_DIR.personal/cart/}",  // Страница корзины
+                                "SHOW_NUM_PRODUCTS"   =>  "Y",                           // Показывать количество товаров
+                                "SHOW_TOTAL_PRICE"    =>  "Y",                           // Показывать общую сумму по товарам
+                                "SHOW_EMPTY_VALUES"   =>  "Y",                           // Выводить нулевые значения в пустой корзине
+                                // endregion
+                                // region Персональный раздел
+                                "SHOW_PERSONAL_LINK"  =>  "Y",                           // Отображать персональный раздел
+                                "PATH_TO_PERSONAL"    =>  "={SITE_DIR.personal/}",       // Страница персонального раздела
+                                // endregion
+                                // region Авторизация
+                                "SHOW_AUTHOR"         =>  "N",                           // Добавить возможность авторизации
+                                "PATH_TO_REGISTER"    =>  "={SITE_DIR.login/}",          // Страница регистрации
+                                "PATH_TO_PROFILE"     =>  "={SITE_DIR.personal/}",       // Страница профиля
+                                // endregion
+                                // region Список товаров
+                                "SHOW_PRODUCTS"       =>  "Y",                           // Показывать список товаров
+                                // endregion
+                                // region Внешний вид
+                                "POSITION_FIXED"      =>  "N",                           // Отображать корзину поверх шаблона
+                                // endregion
+                            )
+                        );
+                        ?>
+                    </div>
+                    <div class="search pull-right">
+                        <?$APPLICATION->IncludeComponent("bitrix:search.title", "main-searching", array(
+                            "NUM_CATEGORIES" => "1",
+                            "TOP_COUNT" => "5",
+                            "CHECK_DATES" => "N",
+                            "SHOW_OTHERS" => "N",
+                            "PAGE" => SITE_DIR."catalog/",
+                            "CATEGORY_0_TITLE" => GetMessage("SEARCH_GOODS") ,
+                            "CATEGORY_0" => array(
+                                0 => "iblock_catalog",
+                            ),
+                            "CATEGORY_0_iblock_catalog" => array(
+                                0 => "all",
+                            ),
+                            "CATEGORY_OTHERS_TITLE" => GetMessage("SEARCH_OTHER"),
+                            "SHOW_INPUT" => "Y",
+                            "INPUT_ID" => "title-search-input",
+                            "CONTAINER_ID" => "search",
+                            "PRICE_CODE" => array(
+                                0 => "BASE",
+                            ),
+                            "SHOW_PREVIEW" => "Y",
+                            "PREVIEW_WIDTH" => "75",
+                            "PREVIEW_HEIGHT" => "75",
+                            "CONVERT_CURRENCY" => "Y"
+                        ),
+                            false
+                        );?>
+                    </div>
                 </div>
-                </div>
             </div>
+    </div>
+
+    <div class="menu-bg container-fluid clearfix">
+        <div class="sep-bg row"></div>
+        <div class="menu-bg row">
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "top_menu",
+                    array(
+                        "ROOT_MENU_TYPE" => "top",
+                        "MENU_CACHE_TYPE" => "A",
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "MENU_CACHE_GET_VARS" => array(
+                        ),
+                        "MAX_LEVEL" => "1",
+                        "CHILD_MENU_TYPE" => "",
+                        "USE_EXT" => "N",
+                        "DELAY" => "N",
+                        "ALLOW_MULTI_SELECT" => "N"
+                        ),
+                        false
+                );?>
         </div>
     </div>
 
-    <div id="main-menu" class="container">
-        <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"top_menu", 
-	array(
-		"ROOT_MENU_TYPE" => "top",
-		"MENU_CACHE_TYPE" => "A",
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MAX_LEVEL" => "1",
-		"CHILD_MENU_TYPE" => "",
-		"USE_EXT" => "N",
-		"DELAY" => "N",
-		"ALLOW_MULTI_SELECT" => "N"
-	),
-	false
-);?>
-    </div>
-
-
     <div id="navigation" class="container">
-        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", array(
-            "START_FROM" => "0",
-            "PATH" => "",
-            "SITE_ID" => "-"
-        ),
-            false,
-            Array('HIDE_ICONS' => 'Y')
-        );?>
+        <div class="row">
+            <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", array(
+                "START_FROM" => "0",
+                "PATH" => "",
+                "SITE_ID" => "-"
+            ),
+                false,
+                Array('HIDE_ICONS' => 'Y')
+            );?>
+        </div>
     </div>
-
-    <div id="content" class="container">
-

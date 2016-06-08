@@ -14,7 +14,8 @@ $this->setFrameMode(true);
 
 $strTitle = "";
 ?>
-<div class="catalog-section-list">
+<div class="catalog-section-list container">
+
 
 
 	<?
@@ -27,7 +28,7 @@ $strTitle = "";
 		$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], CIBlock::GetArrayByID($arSection["IBLOCK_ID"], "SECTION_DELETE"), array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM')));
 		if($CURRENT_DEPTH < $arSection["DEPTH_LEVEL"])
 		{
-			echo "\n",str_repeat("\t", $arSection["DEPTH_LEVEL"]-$TOP_DEPTH),"<ul>";
+			echo "\n",str_repeat("\t", $arSection["DEPTH_LEVEL"]-$TOP_DEPTH),"<ul class='row clearfix'>";
 		}
 		elseif($CURRENT_DEPTH == $arSection["DEPTH_LEVEL"])
 		{
@@ -58,7 +59,7 @@ $strTitle = "";
 		else
 		{
 
-			$link = '<a class="main_category_link col-sm-4 col-md-4 col-lg-4 col-xs-4" href="'.$arSection["SECTION_PAGE_URL"].'"> <h4>'.$arSection["NAME"].$count.'</h4> <img class="main_category_img" src="'.$img_src.'" alt="'.$img_alt.'"></a>';
+			$link = '<a class="main_category_link col-sm-4 col-md-4 col-lg-4 col-xs-4" href="'.$arSection["SECTION_PAGE_URL"].'"> <h4 class="product-title">'.$arSection["NAME"].$count.'</h4> <img class="main_category_img" src="'.$img_src.'" alt="'.$img_alt.'"></a>';
 
 		}
 
@@ -66,7 +67,7 @@ $strTitle = "";
 		?>
 	<li id="<?=$this->GetEditAreaId($arSection['ID']);?>">
 		<?=($strTitle?'<br/><h2>'.$strTitle.'</h2>':'')?>
-		<?=$link?><? $CURRENT_DEPTH = $arSection["DEPTH_LEVEL"];
+		<?=$link?><? $CURRENT_DEPTH = $arSection["DEPTH_LEVEL"]; ?> <?
 		}
 	?>
 </div>

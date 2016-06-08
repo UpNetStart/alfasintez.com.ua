@@ -1,27 +1,29 @@
-
-</div>
-
-
-<div id="footer-wrapper" class="container">
+<div id="footer-wrapper" class="container-fluid">
     <div class="row">
-        <div class="phone-wrapper">
-            <ul>
-                <li class="phone">+38 (097) 296 61 06</li>
-                <li class="phone">+38 (0562) 35 00 26</li>
-                <li class="phone">+38 (067) 631 32 23</li>
-            </ul>
+        <div class="footer-sep-blue"></div>
+        <div class="footer-sep">
         </div>
 
-
-        <div class="contacts-wrapper">
-            <ul>
-                <li class="contacts">E-MAIL:info@alfa-sintez.com.ua                             </li>
-                <li class="contacts">АДРЕС:ул. Набережная Ленина, 27а, оф.16 (вход с Московской)</li>
-            </ul>
-        </div>
+        <div class="container">
+                <?
+                    // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
+                    $APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "include_area",
+                        array(
+                            // region Параметры компонента
+                            "AREA_FILE_SHOW"    =>  "file",  // Показывать включаемую область : array ( 'page' => 'для страницы', 'sect' => 'для раздела', )
+                            "AREA_FILE_PATH"  =>  "/include/footer.inc.php",   // Суффикс имени файла включаемой области
+                            "AREA_FILE_SUFFIX"  =>  "inc",   // Суффикс имени файла включаемой области
+                            "EDIT_TEMPLATE"     =>  "standard.php",      // Шаблон области по умолчанию : array ( 'standard.php' => '[standard.php] Стандартная страница', )
+                            // endregion
+                            "PATH" => "/include/footer.inc.php"
+                        )
+                    );
+                    ?>
     </div>
-    <div class="row copy"> Copyright © 2016. Компания Alfasintez. Полное или частичное копирование материалов запрещено. </div>
-</div >
+    </div>
+</div>
 </div>
 </body>
 </html>
