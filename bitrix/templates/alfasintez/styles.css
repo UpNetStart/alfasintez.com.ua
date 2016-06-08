@@ -1,11 +1,12 @@
 /*---------- TYPO ----------*/
 body{
     font-size: 16px;
-    min-width: 1150px;
+    min-width: 1190px;
 }
 
 #wrapper{
     font-size:1em;
+    min-width: 1190px;
 }
 
 @font-face {
@@ -56,10 +57,18 @@ body{
     white-space: nowrap;
     width: auto;
 }
+.bx_breadcrumbs ul li span{
+    color: #aaa;
+    display: block;
+    font-size: 80%;
+    padding: 0;
+    text-decoration: none;
+}
 
 /*---------- MAIN MENU ----------*/
 .menu-bg{
     background-color: #01465A;
+    min-width: 1170px;
 }
 
 .nav_menu{
@@ -256,7 +265,7 @@ body{
     width:350px;
     height: 110px;
     margin-top:-5.5%;
-    margin-right:0.5%;
+    margin-right:2.5%;
     overflow: hidden;
 }
 

@@ -40,7 +40,7 @@ $curPage = $APPLICATION->GetCurPage(true);
     <div id="header-wrapper" class="container-fluid clearfix">
         <div class="row">
         <div class="container">
-                <div class="top-items row">
+                <div class="top-items">
                     <a href="/" id="logo" class="logo-wrapper pull-left">
                         <img class="logo-img" src="<?php echo SITE_TEMPLATE_PATH ?>/images/main-elements/logo.png" alt="">
                     </a>
@@ -205,3 +205,4 @@ $curPage = $APPLICATION->GetCurPage(true);
                 Array('HIDE_ICONS' => 'Y')
             );?>
     </div>
+<div id="content" class="container">

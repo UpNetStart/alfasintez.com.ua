@@ -1,10 +1,19 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-/** @var CBitrixComponentTemplate $this */
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
+
 CJSCore::Init(array("fx"));
-$randID = mt_rand(0, 100000);
+$randID = $this->randString();
 $strContID = 'bx_catalog_slider_'.$randID;
 $itemsCount = count($arResult["ITEMS"]);
 $arRowIDs = array();
@@ -13,29 +22,37 @@ $strContWidth = 100*$itemsCount;
 $strItemWidth = 100/$itemsCount;
 ?>
 
-<?
-		echo "<pre>";
-			print_r($arResult);
-		echo "</pre>";
-		?>
-111
 <div class="bx_slider_section" id="<? echo $strContID; ?>">
 	<div class="bx_slider_container" style="width:<? echo $strContWidth; ?>%;" id="bx_catalog_slider_cont_<?=$randID?>">
-<?foreach($arResult["ITEMS"] as $key=>$arItem):
-	$strRowID = 'cat-top-'.$keyRow.'_'.mt_rand(0, 1000000);
+<?foreach($arResult["ITEMS"] as $key => $arItem):
+	$strRowID = 'cat-top-'.$key.'_'.$randID;
 	$arRowIDs[] = $strRowID;
+	$targetLink = $arItem['PROPERTIES']['SL_TARGET_URL']['VALUE'];
+	$strTitle = (
+		isset($arItem["IPROPERTY_VALUES"]["ELEMENT_PREVIEW_PICTURE_FILE_TITLE"]) && '' != isset($arItem["IPROPERTY_VALUES"]["ELEMENT_PREVIEW_PICTURE_FILE_TITLE"])
+		? $arItem["IPROPERTY_VALUES"]["ELEMENT_PREVIEW_PICTURE_FILE_TITLE"]
+		: $arItem['NAME']
+	);
 	?>
 		<div id="<? echo $strRowID; ?>" class="bx_slider_block<?echo ($boolFirst ? ' active' : ''); ?>" style="width:<? echo $strItemWidth; ?>%;">
 			<div class="bx_slider_photo_container">
 				<div class="bx_slider_photo_background"></div>
-				<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="bx_slider_photo_element" style="background: #fff url('<?=$arItem["DETAIL_PICTURE"]["SRC"]?>') no-repeat center;">
+
+				<a
+					href="<?=$targetLink?>"
+					class="bx_slider_photo_element"
+					style="background: transparent url('<?=$arItem["DETAIL_PICTURE"]["SRC"]?>') no-repeat center;"
+					title="<? echo $strTitle; ?>"
+				>
 					<!--<div class="bx_stick_disc">-25%</div>
 					<div class="bx_stick new">New</div>-->
 				</a>
 			</div>
 			<div class="bx_slider_content_container">
-				<h1 class="bx_slider_title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h1>
-				<div class="bx_slider_content_description" style="padding-top: 10px;"><?=$arItem["PREVIEW_TEXT"] ? $arItem["PREVIEW_TEXT"] : $arItem["DETAILTEXT"]?></div>
+				<a style="text-decoration: none" href="<?=$targetLink?>">
+					<h1 class="bx_slider_title"><?=$arItem["NAME"]?></h1>
+					<div class="bx_slider_content_description" style="padding-top: 10px;"><?=$arItem["PREVIEW_TEXT"] ? $arItem["PREVIEW_TEXT"] : $arItem["DETAILTEXT"]?></div>
+				</a>
 				<div class="bx_slider_price_container">
 					<div class="bx_slider_price_leftblock">
 					<?if(is_array($arItem["OFFERS"]) && !empty($arItem["OFFERS"])):?>
@@ -63,7 +80,7 @@ $strItemWidth = 100/$itemsCount;
 							<?endforeach;
 						}
 					endif?>
-						<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="bt_blue big shadow cart"><span></span><strong><?=GetMessage("CATALOG_MORE")?></strong></a>
+
 					</div>
 					<div class="bx_slider_price_rightblock"></div>
 				</div>
@@ -81,27 +98,28 @@ if (1 < $itemsCount)
 		'cont' => $strContID,
 		'arrows' => array(
 			'id' => $strContID.'_arrows',
-			'class' => 'bx_slider_controls'
+			'className' => 'bx_slider_controls'
 		),
 		'left' => array(
 			'id' => $strContID.'_left_arr',
-			'class' => 'bx_slider_arrow_left'
+			'className' => 'bx_slider_arrow_left'
 		),
 		'right' => array(
 			'id' => $strContID.'_right_arr',
-			'class' => 'bx_slider_arrow_right'
+			'className' => 'bx_slider_arrow_right'
 		),
 		'pagination' => array(
 			'id' => $strContID.'_pagination',
-			'class' => 'bx_slider_pagination'
+			'className' => 'bx_slider_pagination'
 		),
 		'items' => $arRowIDs,
 		'rotate' => (0 < $arParams['ROTATE_TIMER']),
 		'rotateTimer' => $arParams['ROTATE_TIMER']
 	);
 ?>
+
 <script type="text/javascript">
-	var my = new JCCatalogTopBannerList(<? echo CUtil::PhpToJSObject($arJSParams, false, true); ?>);
+	var ob<? echo $strContID; ?> = new JCCatalogTopBannerList(<? echo CUtil::PhpToJSObject($arJSParams, false, true); ?>);
 </script>
 <?
 }

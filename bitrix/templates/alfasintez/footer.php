@@ -1,3 +1,5 @@
+
+</div>
 <div id="footer-wrapper" class="container-fluid">
     <div class="row">
         <div class="footer-sep-blue"></div>
