@@ -92,7 +92,7 @@
 	box-shadow:0 2px 5px 0 rgba(0,0,0,.18);
 	border-radius:3px;
 	border:1px solid #d3d3d3;
-	background:#fff;
+	background:rgb(251,236,162);
 	-webkit-animation:borderview 0.5s;
 	animation:borderview 0.5s;
 }
@@ -115,12 +115,14 @@
 	height:auto !important;
 }
 .bx_catalog_list_home .bx_catalog_item_title a{
-	color:#3f3f3f;
+	color:rgb(47,181,229);
 	text-decoration:none;
-	font-size:13px;
+	font-size:12px;
+	text-align: justify;
+	font-weight:bold;
 }
 .bx_catalog_list_home .bx_catalog_item_price{
-	color:#3f3f3f;
+	color: rgb(47,181,229);
 	font-weight:bold;
 }
 .bx_catalog_list_home .bx_catalog_item_price span{
@@ -156,7 +158,7 @@
 	font-weight:bold;
 }
 .bx_catalog_list_home .bx_catalog_item_controls .bx_catalog_item_controls_blocktwo{
-	width:100%;
+	width:70%;
 	text-align:center;
 }
 .bx_catalog_list_home .bx_catalog_item_controls .bx_catalog_item_controls_blocktwo a{
@@ -194,8 +196,8 @@
 	position:relative;
 	z-index:910;
 	display:block;
-	padding-top:135%;
-	width:100%;
+	padding-top:120%;
+	width:90%;
 	background-position:center;
 	background-repeat:no-repeat;
 	-webkit-background-size:contain;

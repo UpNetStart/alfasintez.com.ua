@@ -1,7 +1,7 @@
 .bx_slider_section{
 	position:relative;
 	overflow:hidden;
-	margin-top:40px;
+	margin-top:20px;
 	padding-top:30%;
 }/*
 @media (max-width:640px){.bx-touch .bx_slider_section{margin-top:20px;padding-top:70%}}

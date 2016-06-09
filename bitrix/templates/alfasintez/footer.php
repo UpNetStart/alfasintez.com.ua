@@ -4,11 +4,11 @@
 </div><!--div id="content-wrapper" class="container-fluid"-->
 <div id="footer-wrapper" class="container-fluid">
     <div class="row">
-
+        <div class="footer-sep"></div>
         </div>
 
         <div class="container">
-            <div class="footer-sep"></div>
+
                 <?
                     // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
                     $APPLICATION->IncludeComponent(

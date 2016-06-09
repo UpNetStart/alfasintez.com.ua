@@ -173,6 +173,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 	if ($arItem['SECOND_PICT'])
 	{
 		?>
+	<?/**/?>
 		<a id="<? echo $arItemIDs['SECOND_PICT']; ?>" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" class="bx_catalog_item_images_double" style="background-image: url('<? echo (
 				!empty($arItem['PREVIEW_PICTURE_SECOND'])
 				? $arItem['PREVIEW_PICTURE_SECOND']['SRC']
@@ -181,7 +182,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		if ('Y' == $arParams['SHOW_DISCOUNT_PERCENT'])
 		{
 		?>
-			<div id="<? echo $arItemIDs['SECOND_DSC_PERC']; ?>" class="bx_stick_disc right bottom" style="display:<? echo (0 < $arItem['MIN_PRICE']['DISCOUNT_DIFF_PERCENT'] ? '' : 'none'); ?>;">-<? echo $arItem['MIN_PRICE']['DISCOUNT_DIFF_PERCENT']; ?>%</div>
+			<div id="<? echo $arItemIDs['SECOND_DSC_PERC']."s"; ?>" class="bx_stick_disc right bottom" style="display:<? echo (0 < $arItem['MIN_PRICE']['DISCOUNT_DIFF_PERCENT'] ? '' : 'none'); ?>;">-<? echo $arItem['MIN_PRICE']['DISCOUNT_DIFF_PERCENT']; ?>%</div>
 		<?
 		}
 		if ($arItem['LABEL'])
@@ -231,15 +232,25 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 			if ('Y' == $arParams['USE_PRODUCT_QUANTITY'])
 			{
 			?>
-		<div class="bx_catalog_item_controls_blockone"><div style="display: inline-block;position: relative;">
-			<a id="<? echo $arItemIDs['QUANTITY_DOWN']; ?>" href="javascript:void(0)" class="bx_bt_button_type_2 bx_small" rel="nofollow">-</a>
+		<div class="bx_catalog_item_controls_blockone">
+			<div style="display: inline-block;position: relative;">
+
+			<a id="<? echo $arItemIDs['QUANTITY_DOWN']; ?>" href="javascript:void(0)" class="bx_bt_button_type_2 bx_small" rel="nofollow">-
+			</a>
+
 			<input type="text" class="bx_col_input" id="<? echo $arItemIDs['QUANTITY']; ?>" name="<? echo $arParams["PRODUCT_QUANTITY_VARIABLE"]; ?>" value="<? echo $arItem['CATALOG_MEASURE_RATIO']; ?>">
-			<a id="<? echo $arItemIDs['QUANTITY_UP']; ?>" href="javascript:void(0)" class="bx_bt_button_type_2 bx_small" rel="nofollow">+</a>
-			<span id="<? echo $arItemIDs['QUANTITY_MEASURE']; ?>"><? echo $arItem['CATALOG_MEASURE_NAME']; ?></span>
-		</div></div>
+
+				<a id="<? echo $arItemIDs['QUANTITY_UP']; ?>" href="javascript:void(0)" class="bx_bt_button_type_2 bx_small" rel="nofollow">+</a>
+
+				<span id="<? echo $arItemIDs['QUANTITY_MEASURE']; ?>">
+					<? echo $arItem['CATALOG_MEASURE_NAME']; ?>
+				</span>
+		</div>
+		</div>
 			<?
 			}
 			?>
+				<?/*Кнопка отправки заказа*/?>
 		<div class="bx_catalog_item_controls_blocktwo">
 			<a id="<? echo $arItemIDs['BUY_LINK']; ?>" class="bx_bt_button bx_medium" href="javascript:void(0)" rel="nofollow"><?
 			echo ('' != $arParams['MESS_BTN_BUY'] ? $arParams['MESS_BTN_BUY'] : GetMessage('CT_BCS_TPL_MESS_BTN_BUY'));
@@ -270,10 +281,13 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 <?
 			foreach ($arItem['DISPLAY_PROPERTIES'] as $arOneProp)
 			{
-				?><br><strong><? echo $arOneProp['NAME']; ?></strong> <?
+				
+				?>
+
+				<br><strong><? echo $arOneProp['NAME']; ?></strong> <?
 					echo (
 						is_array($arOneProp['DISPLAY_VALUE'])
-						? implode('<br>', $arOneProp['DISPLAY_VALUE'])
+						? implode('', $arOneProp['DISPLAY_VALUE'])
 						: $arOneProp['DISPLAY_VALUE']
 					);
 			}

@@ -98,8 +98,23 @@ $APPLICATION->SetTitle("ООО Альфа Синтез");
 			"PATH" => "include/partners.inc.php"
 		),
 		false
-	); ?>
+	);
+	?>
 
+
+<? // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
+$APPLICATION->IncludeComponent(
+		"bitrix:main.include",
+		".default",
+		array(
+				"AREA_FILE_SHOW" => "file",
+				"AREA_FILE_SUFFIX" => "inc",
+				"EDIT_TEMPLATE" => "",
+				"PATH" => "include/about.inc.php"
+		),
+		false
+);
+?>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

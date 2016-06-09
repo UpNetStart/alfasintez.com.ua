@@ -40,7 +40,7 @@ $curPage = $APPLICATION->GetCurPage(true);
     <div id="header-wrapper" class="container-fluid clearfix">
         <div class="row">
         <div class="container">
-                <div class="top-items">
+                <div class="top-items clearfix">
                     <a href="/" id="logo" class="logo-wrapper pull-left">
                         <img class="logo-img" src="<?php echo SITE_TEMPLATE_PATH ?>/images/main-elements/logo.png" alt="">
                     </a>
@@ -89,7 +89,7 @@ $curPage = $APPLICATION->GetCurPage(true);
                         ?>
                     </div>
 
-                    <div class="cart header-elements-wrapper pull-right">
+                    <div class="cart header-elements-wrapper">
                         <?
                         // Ссылка на корзину
                         $APPLICATION->IncludeComponent(
@@ -136,6 +136,7 @@ $curPage = $APPLICATION->GetCurPage(true);
                             );?>
                         <?endif?>
                     </div>
+                    <div class="cart-wrapper-space pull-right"></div>
                     <div class="search pull-right">
                         <?$APPLICATION->IncludeComponent("bitrix:search.title", "main-searching", array(
                             "NUM_CATEGORIES" => "1",
@@ -197,7 +198,9 @@ $curPage = $APPLICATION->GetCurPage(true);
 <div id="content-wrapper" class="container-fluid">
     <div class="left-bg">
         <div class="right-bg">
-    <div class="sep-bg"></div>
+            <div class="sep-bg"></div>
+            <div id="content" class="container">
+
     <div id="navigation" class="container">
             <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", array(
                 "START_FROM" => "0",
@@ -208,4 +211,3 @@ $curPage = $APPLICATION->GetCurPage(true);
                 Array('HIDE_ICONS' => 'Y')
             );?>
     </div>
-<div id="content" class="container">
