@@ -18,7 +18,7 @@ $curPage = $APPLICATION->GetCurPage(true);
     $APPLICATION->ShowMeta("description", false, true);
     $APPLICATION->ShowCSS(true, true);
     ?>
-    <link rel="stylesheet" type="text/css" href="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH."/colors.css")?>" />
+
     <link rel="stylesheet" type="text/css" href="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH."/css/normalize.css")?>" />
     <link rel="stylesheet" type="text/css" href="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH."/css/bootstrap.css")?>" />
 
@@ -194,7 +194,10 @@ $curPage = $APPLICATION->GetCurPage(true);
         </div>
     </div>
 
-
+<div id="content-wrapper" class="container-fluid">
+    <div class="left-bg">
+        <div class="right-bg">
+    <div class="sep-bg"></div>
     <div id="navigation" class="container">
             <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", array(
                 "START_FROM" => "0",

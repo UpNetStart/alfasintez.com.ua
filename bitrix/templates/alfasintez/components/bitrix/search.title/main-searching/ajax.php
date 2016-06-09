@@ -2,7 +2,7 @@
 if (empty($arResult["CATEGORIES"]))
 	return;
 ?>
-<div class="bx_searche">
+<div class="bx_searche" >
 <?foreach($arResult["CATEGORIES"] as $category_id => $arCategory):?>
 	<?foreach($arCategory["ITEMS"] as $i => $arItem):?>
 		<?//echo $arCategory["TITLE"]?>
@@ -11,7 +11,7 @@ if (empty($arResult["CATEGORIES"]))
 				<div class="bx_img_element"></div>
 				<div class="bx_item_element"><hr></div>
 			</div>
-			<div class="bx_item_block all_result">
+			<div class="bx_item_block all_result" >
 				<div class="bx_img_element"></div>
 				<div class="bx_item_element">
 					<span class="all_result_title"><a href="<?echo $arItem["URL"]?>"><?echo $arItem["NAME"]?></a></span>
@@ -20,7 +20,7 @@ if (empty($arResult["CATEGORIES"]))
 			</div>
 		<?elseif(isset($arResult["ELEMENTS"][$arItem["ITEM_ID"]])):
 			$arElement = $arResult["ELEMENTS"][$arItem["ITEM_ID"]];?>
-			<div class="bx_item_block">
+			<div class="bx_item_block" >
 				<?if (is_array($arElement["PICTURE"])):?>
 				<div class="bx_img_element">
 					<div class="bx_image" style="background-image: url('<?echo $arElement["PICTURE"]["src"]?>')"></div>
@@ -37,7 +37,7 @@ if (empty($arResult["CATEGORIES"]))
 						if($arPrice["CAN_ACCESS"])
 						{
 							if($arPrice["DISCOUNT_VALUE"] < $arPrice["VALUE"]):?>
-								<div class="bx_price">
+								<div class="bx_price" style="color: red; font-weight:bold;">
 									<?=$arPrice["PRINT_DISCOUNT_VALUE"]?>
 									<span class="old"><?=$arPrice["PRINT_VALUE"]?></span>
 								</div>

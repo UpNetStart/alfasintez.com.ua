@@ -45,8 +45,8 @@ div.title-search-result {
 	overflow:hidden;
 	z-index:999;
 	min-width: 370px;
-	margin-left: 11px;
-	margin-top:-20px;
+	margin-left: 30px;
+	margin-top:1px;
 	background-color: #FFF;
 }
 
@@ -76,7 +76,9 @@ div.title-search-result td.title-search-price span {
 	top: 0;
 	bottom: 0;
 }
+.bx_searche .bx_item_block:hover{opacity: 1}
 .bx_searche .bx_item_block{
+	opacity: 0.9;
 	min-height: 65px;
 	position: relative
 }

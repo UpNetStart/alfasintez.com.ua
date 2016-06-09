@@ -10,6 +10,12 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+
+/* $arItem['CATALOG_WEIGHT'] -> Вес */
+/* $arItem['CATALOG_HEIGHT'] -> Высота */
+/* $arItem['CATALOG_WIDTH'] -> Ширина */
+/* $arItem['CATALOG_LENGHT'] -> Длина */
+
 $this->setFrameMode(true);
 
 if (!empty($arResult['ITEMS']))
@@ -93,11 +99,12 @@ if (!empty($arResult['ITEMS']))
 	{
 		?><? echo $arResult["NAV_STRING"]; ?><?
 	}
-
+	
 	$strElementEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT");
 	$strElementDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE");
 	$arElementDeleteParams = array("CONFIRM" => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFIRM'));
-?><div class="bx_catalog_list_home col<? echo $arParams['LINE_ELEMENT_COUNT']; ?> <? echo $templateData['TEMPLATE_CLASS']; ?>"><?
+?>
+	<div class="bx_catalog_list_home col<? echo $arParams['LINE_ELEMENT_COUNT']; ?> <? echo $templateData['TEMPLATE_CLASS']; ?>"><?
 foreach ($arResult['ITEMS'] as $key => $arItem)
 {
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strElementEdit);
@@ -134,13 +141,21 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		? $arItem['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE']
 		: $arItem['NAME']
 	);
+
 	$imgTitle = (
 		isset($arItem['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_TITLE']) && $arItem['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_TITLE'] != ''
 		? $arItem['IPROPERTY_VALUES']['ELEMENT_PREVIEW_PICTURE_FILE_TITLE']
 		: $arItem['NAME']
 	);
-	?><div class="<? echo ($arItem['SECOND_PICT'] ? 'bx_catalog_item double' : 'bx_catalog_item'); ?>"><div class="bx_catalog_item_container" id="<? echo $strMainID; ?>">
-		<a id="<? echo $arItemIDs['PICT']; ?>" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" class="bx_catalog_item_images" style="background-image: url('<? echo $arItem['PREVIEW_PICTURE']['SRC']; ?>')" title="<? echo $imgTitle; ?>"><?
+	?>
+
+<div class="<? echo ($arItem['SECOND_PICT'] ? 'bx_catalog_item double' : 'bx_catalog_item'); ?>">
+	<div class="bx_catalog_item_container" id="<? echo $strMainID; ?>">
+		<div class="bx_catalog_item_title">
+			<a href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" title="<? echo $productTitle; ?>"><? echo $productTitle; ?></a>
+		</div>
+
+			<a id="<? echo $arItemIDs['PICT']; ?>" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" class="bx_catalog_item_images" style="background-image: url('<? echo $arItem['PREVIEW_PICTURE']['SRC']; ?>')" title="<? echo $imgTitle; ?>"><?
 	if ('Y' == $arParams['SHOW_DISCOUNT_PERCENT'])
 	{
 	?>
@@ -157,7 +172,8 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		</a><?
 	if ($arItem['SECOND_PICT'])
 	{
-		?><a id="<? echo $arItemIDs['SECOND_PICT']; ?>" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" class="bx_catalog_item_images_double" style="background-image: url('<? echo (
+		?>
+		<a id="<? echo $arItemIDs['SECOND_PICT']; ?>" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" class="bx_catalog_item_images_double" style="background-image: url('<? echo (
 				!empty($arItem['PREVIEW_PICTURE_SECOND'])
 				? $arItem['PREVIEW_PICTURE_SECOND']['SRC']
 				: $arItem['PREVIEW_PICTURE']['SRC']
@@ -177,7 +193,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		?>
 		</a><?
 	}
-	?><div class="bx_catalog_item_title"><a href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" title="<? echo $productTitle; ?>"><? echo $productTitle; ?></a></div>
+	?>
 	<div class="bx_catalog_item_price"><div id="<? echo $arItemIDs['PRICE']; ?>" class="bx_price"><?
 	if (!empty($arItem['MIN_PRICE']))
 	{
