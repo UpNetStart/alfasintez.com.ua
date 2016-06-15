@@ -1,5 +1,5 @@
 <div class="about-us-wrapper container clearfix">
-    <h3 class="about-us-header">Наша фирма</h3>
+    <h3 class="about-us-header">Наша компания</h3>
 
     <div class="about-us-img-wrapper  pull-left">
         <img src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-us.png" alt="" class="img-responsive" >

@@ -90,82 +90,30 @@ $curPage = $APPLICATION->GetCurPage(true);
                     </div>
 
                     <div class="cart header-elements-wrapper">
-                        <?
-                        // Ссылка на корзину
-                        $APPLICATION->IncludeComponent(
+                        <?$APPLICATION->IncludeComponent(
                             "bitrix:sale.basket.basket.line",
-                            ".default",               // [eshop_adapt, .default]
-                            array(
-                                //  region Основные параметры
-                                "PATH_TO_BASKET"      =>  "={SITE_DIR.personal/cart/}",  // Страница корзины
-                                "SHOW_NUM_PRODUCTS"   =>  "Y",                           // Показывать количество товаров
-                                "SHOW_TOTAL_PRICE"    =>  "Y",                           // Показывать общую сумму по товарам
-                                "SHOW_EMPTY_VALUES"   =>  "Y",                           // Выводить нулевые значения в пустой корзине
-                                // endregion
-                                // region Персональный раздел
-                                "SHOW_PERSONAL_LINK"  =>  "Y",                           // Отображать персональный раздел
-                                "PATH_TO_PERSONAL"    =>  "={SITE_DIR.personal/}",       // Страница персонального раздела
-                                // endregion
-                                // region Авторизация
-                                "SHOW_AUTHOR"         =>  "N",                           // Добавить возможность авторизации
-                                "PATH_TO_REGISTER"    =>  "={SITE_DIR.login/}",          // Страница регистрации
-                                "PATH_TO_PROFILE"     =>  "={SITE_DIR.personal/}",       // Страница профиля
-                                // endregion
-                                // region Список товаров
-                                "SHOW_PRODUCTS"       =>  "Y",                           // Показывать список товаров
-                                // endregion
-                                // region Внешний вид
-                                "POSITION_FIXED"      =>  "N",                           // Отображать корзину поверх шаблона
-                                // endregion
+                            "top-cart",
+                            Array(
+                                "PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+                                "PATH_TO_PERSONAL" => SITE_DIR."personal/",
+                                "SHOW_PERSONAL_LINK" => "N",
+                                "SHOW_NUM_PRODUCTS" => "Y",
+                                "SHOW_TOTAL_PRICE" => "Y",
+                                "SHOW_EMPTY_VALUES" => "Y",
+                                "SHOW_PRODUCTS" => "Y",
+                                "POSITION_FIXED" => "N",
+                                "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+                                "SHOW_DELAY" => "Y",
+                                "SHOW_NOTAVAIL" => "Y",
+                                "SHOW_SUBSCRIBE" => "Y",
+                                "SHOW_IMAGE" => "Y",
+                                "SHOW_PRICE" => "Y",
+                                "SHOW_SUMMARY" => "Y"
                             )
-                        );
-                        ?>
-
-                        <?if ($APPLICATION->GetCurPage(true) == SITE_DIR."index.php"):?>
-                            <?$APPLICATION->IncludeComponent(
-                                "bitrix:main.include",
-                                "",
-                                Array(
-                                    "AREA_FILE_SHOW" => "sect",
-                                    "AREA_FILE_SUFFIX" => "inc",
-                                    "AREA_FILE_RECURSIVE" => "N",
-                                    "EDIT_MODE" => "html",
-                                ),
-                                false,
-                                Array('HIDE_ICONS' => 'Y')
-                            );?>
-                        <?endif?>
-                    </div>
-                    <div class="cart-wrapper-space pull-right"></div>
-                    <div class="search pull-right">
-                        <?$APPLICATION->IncludeComponent("bitrix:search.title", "main-searching", array(
-                            "NUM_CATEGORIES" => "1",
-                            "TOP_COUNT" => "5",
-                            "CHECK_DATES" => "N",
-                            "SHOW_OTHERS" => "N",
-                            "PAGE" => SITE_DIR."catalog/",
-                            "CATEGORY_0_TITLE" => GetMessage("SEARCH_GOODS") ,
-                            "CATEGORY_0" => array(
-                                0 => "iblock_catalog",
-                            ),
-                            "CATEGORY_0_iblock_catalog" => array(
-                                0 => "all",
-                            ),
-                            "CATEGORY_OTHERS_TITLE" => GetMessage("SEARCH_OTHER"),
-                            "SHOW_INPUT" => "Y",
-                            "INPUT_ID" => "title-search-input",
-                            "CONTAINER_ID" => "search",
-                            "PRICE_CODE" => array(
-                                0 => "BASE",
-                            ),
-                            "SHOW_PREVIEW" => "Y",
-                            "PREVIEW_WIDTH" => "75",
-                            "PREVIEW_HEIGHT" => "75",
-                            "CONVERT_CURRENCY" => "Y"
-                        ),
-                            false
                         );?>
                     </div>
+                    <div class="cart-wrapper-space pull-right"></div>
+
                 </div>
             </div>
         </div>

@@ -4,11 +4,12 @@
             <div class="row">
             <div class="footer-contacts pull-left">
                     <div class="phone-footer">
-                        <img src="<?php echo SITE_TEMPLATE_PATH ?>/images/phone-logo.png" alt="" class="pull-left" style="margin-top: 7%">
+                        <img src="<?php echo SITE_TEMPLATE_PATH ?>/images/phone-logo.png" alt="" class="pull-left" style="margin-top: 13.5%">
                         <div class="pull-left">
                             <p>+38 (097) 296 61 06</p>
                             <p>+38 (0562) 35 00 26</p>
                             <p>+38 (067) 631 32 23</p>
+                            <p>+38 (067) 405 23 88</p>
                         </div>
                     </div>
             </div>

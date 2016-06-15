@@ -28,6 +28,9 @@ if ($arParams['POSITION_FIXED'] == 'Y')
 			<?=GetMessage('TSB1_CART')?>
 		</div>
 	<?$frame->end()?>
+	<!--<div class="slide-cart-link">
+		<a href="#" id="" onclick="$("bx_itemlist_container").toggleOpenCloseCart()"> Свернуть \ Развернуть </a>
+	</div> -->
 </div>
 
 <script>

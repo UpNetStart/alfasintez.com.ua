@@ -79,7 +79,7 @@ if ($arParams['USE_FILTER'] == 'Y')
 	}
 	?><?$APPLICATION->IncludeComponent(
 		"bitrix:catalog.smart.filter",
-		"visual_".($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL" ? "horizontal" : "vertical"),
+		"category_filter",
 		array(
 			"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 			"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -128,7 +128,10 @@ if ($verticalGrid)
 		"ADD_SECTIONS_CHAIN" => (isset($arParams["ADD_SECTIONS_CHAIN"]) ? $arParams["ADD_SECTIONS_CHAIN"] : '')
 	),
 	$component
-);?><?
+);?>
+
+
+<?
 if($arParams["USE_COMPARE"]=="Y")
 {
 	?><?$APPLICATION->IncludeComponent(

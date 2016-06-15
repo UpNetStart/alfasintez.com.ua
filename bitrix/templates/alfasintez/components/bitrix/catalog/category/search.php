@@ -12,9 +12,13 @@ if($arParams["USE_COMPARE"]=="Y")
 		"COMPARE_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["compare"],
 	),
 	$component
-);?><?
+);?>
+
+	<?
 }
-?><?$APPLICATION->IncludeComponent(
+?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.search",
 	"",
 	array(

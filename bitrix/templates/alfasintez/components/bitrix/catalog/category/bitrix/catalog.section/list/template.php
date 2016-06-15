@@ -20,11 +20,11 @@ $this->setFrameMode(true);
 	<thead>
 	<tr>
 		<td><?=GetMessage("CATALOG_TITLE")?></td>
-		<?if(count($arResult["ITEMS"]) > 0):
+		<? /*if(count($arResult["ITEMS"]) > 0):
 			foreach($arResult["ITEMS"][0]["DISPLAY_PROPERTIES"] as $arProperty):?>
 				<td><?=$arProperty["NAME"]?></td>
 			<?endforeach;
-		endif;?>
+		endif;*/?>
 		<?foreach($arResult["PRICES"] as $code=>$arPrice):?>
 			<td><?=$arPrice["TITLE"]?></td>
 		<?endforeach?>
@@ -64,7 +64,9 @@ $this->setFrameMode(true);
 				<?if($arPrice["DISCOUNT_VALUE"] < $arPrice["VALUE"]):?>
 					<s><?=$arPrice["PRINT_VALUE"]?></s><br /><span class="catalog-price"><?=$arPrice["PRINT_DISCOUNT_VALUE"]?></span>
 				<?else:?>
-					<span class="catalog-price"><?=$arPrice["PRINT_VALUE"]?></span>
+					<span class="catalog-price">
+						<?=$arPrice["PRINT_VALUE"]?>
+					</span>
 				<?endif?>
 			<?else:?>
 				&nbsp;

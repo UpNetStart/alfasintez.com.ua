@@ -162,6 +162,10 @@ if (isset($arCurrentValues['IBLOCK_ID']) && 0 < intval($arCurrentValues['IBLOCK_
 			array('SORT' => 'ASC', 'ID' => 'ASC'),
 			array('IBLOCK_ID' => $arSKU['IBLOCK_ID'], 'ACTIVE' => 'Y')
 		);
+
+
+
+
 		while ($arProp = $rsProps->Fetch())
 		{
 			if ($arProp['ID'] == $arSKU['SKU_PROPERTY_ID'])

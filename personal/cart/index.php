@@ -1,7 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Корзина");
-?><?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket", "", array(
+?>
+
+<?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket", "", array(
 	"COUNT_DISCOUNT_4_ALL_QUANTITY" => "N",
 	"COLUMNS_LIST" => array(
 		0 => "NAME",
