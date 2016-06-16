@@ -17,9 +17,10 @@
 /* $arItem['CATALOG_LENGHT'] -> Длина */
 
 $this->setFrameMode(true);
-
-
-
+?>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+<?
 
 
 if (!empty($arResult['ITEMS']))
@@ -182,7 +183,9 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 				!empty($arItem['PREVIEW_PICTURE_SECOND'])
 				? $arItem['PREVIEW_PICTURE_SECOND']['SRC']
 				: $arItem['PREVIEW_PICTURE']['SRC']
-			); ?>');" title="<? echo $imgTitle; ?>"><?
+			); ?>');" title="<? echo $imgTitle; ?>">
+
+		<?
 		if ('Y' == $arParams['SHOW_DISCOUNT_PERCENT'])
 		{
 		?>
@@ -327,6 +330,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 			<div class="bx_catalog_item_articul">
 
 			<strong style="text-align: center">Рекомендуем для:</strong>
+			<div style="clear:both"></div>
 			<ul class="category-recommend-label">
 				<? $arLinkElementsID = $arItem['PROPERTIES']['PR_FILTERS']['VALUE']; ?>
 			<?
@@ -381,46 +385,62 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 				}
 			}
 			$emptyProductProperties = empty($arItem['PRODUCT_PROPERTIES']);
-			if (!$emptyProductProperties){?>
-								<table style="margin: 5px auto; color: rgba(9, 9, 13, 0.4);">
-				<?
-									foreach ($arItem['PRODUCT_PROPERTIES'] as $propID => $propInfo){ ?>
-										<tr>
+			if (!$emptyProductProperties)
+			{
+?>
+				<table style="margin: 5px auto; color: rgba(9, 9, 13, 0.4);">
+<?
+					foreach ($arItem['PRODUCT_PROPERTIES'] as $propID => $propInfo)
+					{
+?>
+						<th style="text-align: center; margin-bottom: 3px;"><? echo $arItem['PROPERTIES'][$propID]['NAME']; ?></th>
+						<tr>
 
-											<td><? echo $arItem['PROPERTIES'][$propID]['NAME']; ?></td>
-											<td>
-				<?
-												if(
-													'L' == $arItem['PROPERTIES'][$propID]['PROPERTY_TYPE'] && 'C' == $arItem['PROPERTIES'][$propID]['LIST_TYPE']
-												)
-												{
-													foreach($propInfo['VALUES'] as $valueID => $value)
-													{
-														?>
-														<label>
-															<input type="radio" name="<? echo $arParams['PRODUCT_PROPS_VARIABLE']; ?>[<? echo $propID; ?>]" value="<? echo $valueID; ?>" <? echo ($valueID == $propInfo['SELECTED'] ? '"checked"' : ''); ?>><? echo $value; ?></label><br><?
-													}
-												}
-												else
-												{
-													?>
-													<select name="<? echo $arParams['PRODUCT_PROPS_VARIABLE']; ?>[<? echo $propID; ?>]">
-														<?
-													foreach($propInfo['VALUES'] as $valueID => $value){ ?>
+							<td>
+<?
+								if(
+									'L' == $arItem['PROPERTIES'][$propID]['PROPERTY_TYPE'] && 'C' == $arItem['PROPERTIES'][$propID]['LIST_TYPE']
+								)
+								{
+									foreach($propInfo['VALUES'] as $valueID => $value)
+									{
+										?>
+										<label>
+											<input type="radio" name="<? echo $arParams['PRODUCT_PROPS_VARIABLE']; ?>[<? echo $propID; ?>]" value="<? echo $valueID; ?>" <? echo ($valueID == $propInfo['SELECTED'] ? '"checked"' : ''); ?>><? echo $value; ?></label><br><?
+									}
+								}
+								else
+								{
+									?><select  name="<? echo $arParams['PRODUCT_PROPS_VARIABLE']; ?>[<? echo $propID; ?>]"><?
+									foreach($propInfo['VALUES'] as $valueID => $value)
+									{
+										?>
+										<option  value="<? echo $valueID; ?>" <? echo ($valueID == $propInfo['SELECTED'] ? 'selected' : ''); ?>><? echo $value; ?></option><?
+									}
+									?></select>
 
-														<option value="<? echo $valueID; ?>" <? echo ($valueID == $propInfo['SELECTED'] ? 'selected' : ''); ?>><? echo $value; ?></option>
+									<?
+								}
+?>
 
-													<? } ?>
-													</select>
-
-													<? } ?>
-											</td>
-										</tr>
-				<? } ?>
-								</table>
-				<? } ?>
-						</div>
-<? 			}
+							</td>
+						</tr>
+<?
+					}
+?>
+				</table>
+				<script>
+					$('.selectpicker').selectpicker({
+						style: 'show-tick',
+						size: 4
+					});
+				</script>
+<?
+			}
+?>
+		</div>
+<?
+		}
 
 		$arJSParams = array(
 			'PRODUCT_TYPE' => $arItem['CATALOG_TYPE'],
@@ -659,10 +679,14 @@ BX.message({
 	BTN_MESSAGE_CLOSE: '<? echo GetMessageJS('CT_BCS_CATALOG_BTN_MESSAGE_CLOSE') ?>'
 });
 </script>
-<?
+
+
+	<?
 	if ($arParams["DISPLAY_BOTTOM_PAGER"])
 	{
 		?><? echo $arResult["NAV_STRING"]; ?><?
 	}
 }
 ?>
+
+

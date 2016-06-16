@@ -43,6 +43,14 @@ if (!empty($arResult['ITEMS']))
 	$arElementDeleteParams = array("CONFIRM" => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFIRM'));
 ?>
 	<div class="bx_catalog_list_home col<? echo $arParams['LINE_ELEMENT_COUNT']; ?> <? echo $templateData['TEMPLATE_CLASS']; ?>"><?
+
+
+
+				echo "<pre>";
+					print_r($arResult);
+				echo "</pre>";
+
+
 foreach ($arResult['ITEMS'] as $key => $arItem)
 {
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strElementEdit);
@@ -93,8 +101,6 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		<div class="bx_catalog_item_title">
 			<a href="<? echo $arItem['DETAIL_URL']; ?>" title="<? echo $productTitle; ?>"><? echo $productTitle; ?></a> 
 		</div>
-
-
 			<a id="<? echo $arItemIDs['PICT']; ?>" href="<? echo $arItem['DETAIL_URL']; ?>" class="bx_catalog_item_images" style="background-image: url('<? echo $arItem['PICTURE']['SRC']; ?>'); height: 180px; width: auto" title="<? echo $imgTitle; ?>">
 			</a>
 			<a id="<? echo $arItemIDs['SECOND_PICT']; ?>" href="<? echo $arItem['DETAIL_URL']; ?>" class="bx_catalog_item_images_double" style="background-image: url('<? echo ($arItem['PICTURE']['SRC']); ?>'); height: 180px; width: auto;" title="<? echo $imgTitle; ?>">
@@ -438,7 +444,9 @@ var <? echo $strObName; ?> = new JCCatalogSection(<? echo CUtil::PhpToJSObject($
 						$arOneJs['PRICE']['DISCOUNT_DIFF_PERCENT'] = '-'.$arOneJs['PRICE']['DISCOUNT_DIFF_PERCENT'].'%';
 				}
 				unset($arOneJs);
-				?></div><?
+				?></div>
+
+			<?
 				if ($arItem['OFFERS_PROPS_DISPLAY'])
 				{
 					foreach ($arItem['JS_OFFERS'] as $keyOffer => $arJSOffer)

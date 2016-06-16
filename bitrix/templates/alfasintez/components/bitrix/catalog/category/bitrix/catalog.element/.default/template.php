@@ -136,101 +136,53 @@ if ('Y' == $arParams['DISPLAY_NAME'])
 	?>
 	<div class="bx_item_container clearfix">
 		<div class="bx_lt">
-			<div class="bx_item_slider" id="<? echo $arItemIDs['BIG_SLIDER_ID']; ?>">
-				<div class="bx_bigimages" id="<? echo $arItemIDs['BIG_IMG_CONT_ID']; ?>">
-					<div class="bx_bigimages_imgcontainer">
-						<span class="bx_bigimages_aligner">
-							<img id="<? echo $arItemIDs['PICT']; ?>" src="<? echo $arFirstPhoto['SRC']; ?>" alt="<? echo $strAlt; ?>" title="<? echo $strTitle; ?>">
-						</span>
-<?
-if ('Y' == $arParams['SHOW_DISCOUNT_PERCENT'])
-{
-	if (!isset($arResult['OFFERS']) || empty($arResult['OFFERS']))
+				<div class="bx_item_slider" id="<? echo $arItemIDs['BIG_SLIDER_ID']; ?>">
+					<div class="bx_bigimages" id="<? echo $arItemIDs['BIG_IMG_CONT_ID']; ?>">
+						<div class="bx_bigimages_imgcontainer">
+							<span class="bx_bigimages_aligner">
+								<img id="<? echo $arItemIDs['PICT']; ?>" src="<? echo $arFirstPhoto['SRC']; ?>" alt="<? echo $strAlt; ?>" title="<? echo $strTitle; ?>">
+							</span>
+	<?
+	if ('Y' == $arParams['SHOW_DISCOUNT_PERCENT'])
 	{
-		if (0 < $arResult['MIN_PRICE']['DISCOUNT_DIFF'])
+		if (!isset($arResult['OFFERS']) || empty($arResult['OFFERS']))
 		{
-?>
-	<div class="bx_stick_disc right bottom" id="<? echo $arItemIDs['DISCOUNT_PICT_ID'] ?>"><? echo $arResult['MIN_PRICE']['DISCOUNT_DIFF_PERCENT']; ?>%</div>
-<?
-		}
-	}
-	else
-	{
-?>
-	<div class="bx_stick_disc right bottom" id="<? echo $arItemIDs['DISCOUNT_PICT_ID'] ?>" style="display: none;"></div>
-<?
-	}
-}
-if ($arResult['LABEL'])
-{
-?>
-	<div class="bx_stick average left top" id="<? echo $arItemIDs['STICKER_ID'] ?>" title="<? echo $arResult['LABEL_VALUE']; ?>"><? echo $arResult['LABEL_VALUE']; ?></div>
-<?
-}
-?>
-	</div>
-
-
-
-	</div>
-<?
-if ($arResult['SHOW_SLIDER'])
-{
-	if (!isset($arResult['OFFERS']) || empty($arResult['OFFERS']))
-	{
-		if (5 < $arResult['MORE_PHOTO_COUNT'])
-		{
-			$strClass = 'bx_slider_conteiner full';
-			$strOneWidth = (100/$arResult['MORE_PHOTO_COUNT']).'%';
-			$strWidth = (20*$arResult['MORE_PHOTO_COUNT']).'%';
-			$strSlideStyle = '';
+			if (0 < $arResult['MIN_PRICE']['DISCOUNT_DIFF'])
+			{
+	?>
+		<div class="bx_stick_disc right bottom" id="<? echo $arItemIDs['DISCOUNT_PICT_ID'] ?>"><? echo $arResult['MIN_PRICE']['DISCOUNT_DIFF_PERCENT']; ?>%</div>
+	<?
+			}
 		}
 		else
 		{
-			$strClass = 'bx_slider_conteiner';
-			$strOneWidth = '20%';
-			$strWidth = '100%';
-			$strSlideStyle = 'display: none;';
+	?>
+		<div class="bx_stick_disc right bottom" id="<? echo $arItemIDs['DISCOUNT_PICT_ID'] ?>" style="display: none;"></div>
+	<?
 		}
-?>
-	<div class="<? echo $strClass; ?>" id="<? echo $arItemIDs['SLIDER_CONT_ID']; ?>">
-	<div class="bx_slider_scroller_container">
-	<div class="bx_slide">
-
-	<ul style="width: <? echo $strWidth; ?>;" id="<? echo $arItemIDs['SLIDER_LIST']; ?>">
-<?
-		foreach ($arResult['MORE_PHOTO'] as &$arOnePhoto)
-		{
-?>
-	<li data-value="<? echo $arOnePhoto['ID']; ?>" style="width: <? echo $strOneWidth; ?>; padding-top: <? echo $strOneWidth; ?>;"><span class="cnt"><span class="cnt_item" style="background-image:url('<? echo $arOnePhoto['SRC']; ?>');"></span></span></li>
-<?
-		}
-		unset($arOnePhoto);
-?>
-	</ul>
-	</div>
-
-		<?/* after slide */ ?>
-
-
-	<div class="bx_slide_left" id="<? echo $arItemIDs['SLIDER_LEFT']; ?>" style="<? echo $strSlideStyle; ?>"></div>
-	<div class="bx_slide_right" id="<? echo $arItemIDs['SLIDER_RIGHT']; ?>" style="<? echo $strSlideStyle; ?>"></div>
-	</div>
-	</div>
-<?
 	}
-	else
+	if ($arResult['LABEL'])
 	{
-		foreach ($arResult['OFFERS'] as $key => $arOneOffer)
+	?>
+		<div class="bx_stick average left top" id="<? echo $arItemIDs['STICKER_ID'] ?>" title="<? echo $arResult['LABEL_VALUE']; ?>"><? echo $arResult['LABEL_VALUE']; ?></div>
+	<?
+	}
+	?>
+		</div>
+
+
+
+		</div>
+	<?
+	if ($arResult['SHOW_SLIDER'])
+	{
+		if (!isset($arResult['OFFERS']) || empty($arResult['OFFERS']))
 		{
-			if (!isset($arOneOffer['MORE_PHOTO_COUNT']) || 0 >= $arOneOffer['MORE_PHOTO_COUNT'])
-				continue;
-			$strVisible = ($key == $arResult['OFFERS_SELECTED'] ? '' : 'none');
-			if (5 < $arOneOffer['MORE_PHOTO_COUNT'])
+			if (5 < $arResult['MORE_PHOTO_COUNT'])
 			{
 				$strClass = 'bx_slider_conteiner full';
-				$strOneWidth = (100/$arOneOffer['MORE_PHOTO_COUNT']).'%';
-				$strWidth = (20*$arOneOffer['MORE_PHOTO_COUNT']).'%';
+				$strOneWidth = (100/$arResult['MORE_PHOTO_COUNT']).'%';
+				$strWidth = (20*$arResult['MORE_PHOTO_COUNT']).'%';
 				$strSlideStyle = '';
 			}
 			else
@@ -240,34 +192,82 @@ if ($arResult['SHOW_SLIDER'])
 				$strWidth = '100%';
 				$strSlideStyle = 'display: none;';
 			}
-?>
-	<div class="<? echo $strClass; ?>" id="<? echo $arItemIDs['SLIDER_CONT_OF_ID'].$arOneOffer['ID']; ?>" style="display: <? echo $strVisible; ?>;">
-	<div class="bx_slider_scroller_container">
-	<div class="bx_slide">
-	<ul style="width: <? echo $strWidth; ?>;" id="<? echo $arItemIDs['SLIDER_LIST_OF_ID'].$arOneOffer['ID']; ?>">
-<?
-			foreach ($arOneOffer['MORE_PHOTO'] as &$arOnePhoto)
+	?>
+		<div class="<? echo $strClass; ?>" id="<? echo $arItemIDs['SLIDER_CONT_ID']; ?>">
+		<div class="bx_slider_scroller_container">
+		<div class="bx_slide">
+
+		<ul style="width: <? echo $strWidth; ?>;" id="<? echo $arItemIDs['SLIDER_LIST']; ?>">
+	<?
+			foreach ($arResult['MORE_PHOTO'] as &$arOnePhoto)
 			{
-?>
-	<li data-value="<? echo $arOneOffer['ID'].'_'.$arOnePhoto['ID']; ?>" style="width: <? echo $strOneWidth; ?>; padding-top: <? echo $strOneWidth; ?>"><span class="cnt"><span class="cnt_item" style="background-image:url('<? echo $arOnePhoto['SRC']; ?>');"></span></span></li>
-<?
+	?>
+		<li data-value="<? echo $arOnePhoto['ID']; ?>" style="width: <? echo $strOneWidth; ?>; padding-top: <? echo $strOneWidth; ?>;"><span class="cnt"><span class="cnt_item" style="background-image:url('<? echo $arOnePhoto['SRC']; ?>');"></span></span></li>
+	<?
 			}
 			unset($arOnePhoto);
-?>
-	</ul>
-	</div>
-	<div class="bx_slide_left" id="<? echo $arItemIDs['SLIDER_LEFT_OF_ID'].$arOneOffer['ID'] ?>" style="<? echo $strSlideStyle; ?>" data-value="<? echo $arOneOffer['ID']; ?>"></div>
-	<div class="bx_slide_right" id="<? echo $arItemIDs['SLIDER_RIGHT_OF_ID'].$arOneOffer['ID'] ?>" style="<? echo $strSlideStyle; ?>" data-value="<? echo $arOneOffer['ID']; ?>"></div>
-	</div>
-	</div>
-<?
+	?>
+		</ul>
+		</div>
+
+			<?/* after slide */ ?>
+
+
+		<div class="bx_slide_left" id="<? echo $arItemIDs['SLIDER_LEFT']; ?>" style="<? echo $strSlideStyle; ?>"></div>
+		<div class="bx_slide_right" id="<? echo $arItemIDs['SLIDER_RIGHT']; ?>" style="<? echo $strSlideStyle; ?>"></div>
+		</div>
+		</div>
+	<?
+		}
+		else
+		{
+			foreach ($arResult['OFFERS'] as $key => $arOneOffer)
+			{
+				if (!isset($arOneOffer['MORE_PHOTO_COUNT']) || 0 >= $arOneOffer['MORE_PHOTO_COUNT'])
+					continue;
+				$strVisible = ($key == $arResult['OFFERS_SELECTED'] ? '' : 'none');
+				if (5 < $arOneOffer['MORE_PHOTO_COUNT'])
+				{
+					$strClass = 'bx_slider_conteiner full';
+					$strOneWidth = (100/$arOneOffer['MORE_PHOTO_COUNT']).'%';
+					$strWidth = (20*$arOneOffer['MORE_PHOTO_COUNT']).'%';
+					$strSlideStyle = '';
+				}
+				else
+				{
+					$strClass = 'bx_slider_conteiner';
+					$strOneWidth = '20%';
+					$strWidth = '100%';
+					$strSlideStyle = 'display: none;';
+				}
+	?>
+		<div class="<? echo $strClass; ?>" id="<? echo $arItemIDs['SLIDER_CONT_OF_ID'].$arOneOffer['ID']; ?>" style="display: <? echo $strVisible; ?>;">
+		<div class="bx_slider_scroller_container">
+		<div class="bx_slide">
+		<ul style="width: <? echo $strWidth; ?>;" id="<? echo $arItemIDs['SLIDER_LIST_OF_ID'].$arOneOffer['ID']; ?>">
+	<?
+				foreach ($arOneOffer['MORE_PHOTO'] as &$arOnePhoto)
+				{
+	?>
+		<li data-value="<? echo $arOneOffer['ID'].'_'.$arOnePhoto['ID']; ?>" style="width: <? echo $strOneWidth; ?>; padding-top: <? echo $strOneWidth; ?>"><span class="cnt"><span class="cnt_item" style="background-image:url('<? echo $arOnePhoto['SRC']; ?>');"></span></span></li>
+	<?
+				}
+				unset($arOnePhoto);
+	?>
+		</ul>
+		</div>
+		<div class="bx_slide_left" id="<? echo $arItemIDs['SLIDER_LEFT_OF_ID'].$arOneOffer['ID'] ?>" style="<? echo $strSlideStyle; ?>" data-value="<? echo $arOneOffer['ID']; ?>"></div>
+		<div class="bx_slide_right" id="<? echo $arItemIDs['SLIDER_RIGHT_OF_ID'].$arOneOffer['ID'] ?>" style="<? echo $strSlideStyle; ?>" data-value="<? echo $arOneOffer['ID']; ?>"></div>
+		</div>
+		</div>
+	<?
+			}
 		}
 	}
-}
-?>
-</div>
-		</div>
-	<div class="element-left-wrapper pull-right clearfix">
+	?>
+	</div>
+			</div>
+		<div class="element-left-wrapper pull-right clearfix">
 	<?
 	if (!empty($arResult['DISPLAY_PROPERTIES']) || $arResult['SHOW_OFFERS_PROPS'])
 	{
@@ -281,9 +281,9 @@ if ($arResult['SHOW_SLIDER'])
 			<div class="header-prams">&MediumSpace;Характеристики</div>
 
 			<div class="prop-container">
-				<div class="prop-wrapper"><span class="prop-name">Ширина</span> <?=$arResult['CATALOG_WIDTH']  ?> мм.</div>
-				<div class="prop-wrapper"><span class="prop-name">Длинна</span> <?=$arResult['CATALOG_LENGTH'] ?> мм.</div>
-				<div class="prop-wrapper"><span class="prop-name">Высота</span> <?=$arResult['CATALOG_HEIGHT'] ?> мм.</div>
+				<div class="prop-wrapper"><span class="prop-name">Ширина:</span> <?=$arResult['CATALOG_WIDTH']  ?> <i>мм.</i></div>
+				<div class="prop-wrapper"><span class="prop-name">Длинна:</span> <?=$arResult['CATALOG_LENGTH'] ?> <i>мм.</i></div>
+				<div class="prop-wrapper"><span class="prop-name">Высота:</span> <?=$arResult['CATALOG_HEIGHT'] ?> <i>мм.</i></div>
 
 			</div>
 		</div>
@@ -440,6 +440,18 @@ if ($arResult['SHOW_SLIDER'])
 					<span class="price-header"> Стоимость ящика: </span> <? echo round($reloadPrice, 2)." грн."; ?>
 				<? }else{ ?>
 				<? } ?>
+			</div>
+		</div>
+
+		<div class="item_price" title="Цена за ящик.">
+			<div class="item_current_price" id="<? echo $arItemIDs['PRICE']; ?>">
+
+				<? if((int)$PROD_COUNT_BOX == 0){?>
+					<span class="price-header"> Количество в ящике: </span> <? echo "<span class='item_section_name_gray'>Уточните у менеджера</span>"; ?>
+				<? }else{ ?>
+					<span class="price-header"> Количество в ящике: </span> <? echo $PROD_COUNT_BOX." ед."; ?>
+				<? } ?>
+			</div>
 		</div>
 
 
@@ -592,8 +604,7 @@ if ($arResult['SHOW_SLIDER'])
 
 		<div style="clear: both;"></div>
 	</div>
-	</div>
-</div>
+
 
 <?
 if (isset($arResult['OFFERS']) && !empty($arResult['OFFERS']))
@@ -717,6 +728,10 @@ else
 <?
 		}
 ?>
+	<?
+
+	?>
+
 </div>
 <?
 	}
@@ -774,3 +789,5 @@ BX.message({
 	SITE_ID: '<? echo SITE_ID; ?>'
 });
 </script>
+
+		<div style="clear: both;"></div>

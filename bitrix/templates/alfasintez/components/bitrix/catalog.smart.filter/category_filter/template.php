@@ -21,7 +21,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParam
 
 <div class="bx_filter_horizontal bx_<?=$arParams["TEMPLATE_THEME"]?>">
 	<div class="bx_filter_section m4">
-		<div class="bx_filter_title"><?echo GetMessage("CT_BCSF_FILTER_TITLE")?></div>
+		<div class="bx_filter_title"><?//echo GetMessage("CT_BCSF_FILTER_TITLE")?></div>
 
 
 		<form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
@@ -29,106 +29,12 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParam
 			foreach($arResult["HIDDEN"] as $arItem):?>
 			<input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
 			<?endforeach;
-			foreach($arResult["ITEMS"] as $key=>$arItem):
-				$key = md5($key);
-				if(isset($arItem["PRICE"])):
-					if (!$arItem["VALUES"]["MIN"]["VALUE"] || !$arItem["VALUES"]["MAX"]["VALUE"] || $arItem["VALUES"]["MIN"]["VALUE"] == $arItem["VALUES"]["MAX"]["VALUE"])
-						continue;
-					?>
-					<div class="bx_filter_container price">
-						<span class="bx_filter_container_title" onclick="hideFilterProps(this)"><?=$arItem["NAME"]?></span>
-						<div class="bx_filter_param_area">
-							<div class="bx_filter_param_area_block"><div class="bx_input_container">
-									<input
-											class="min-price"
-											type="text"
-											name="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"
-											id="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"
-											value="<?echo $arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
-											size="5"
-											onkeyup="smartFilter.keyup(this)"
-									/>
-								</div></div>
-							<div class="bx_filter_param_area_block"><div class="bx_input_container">
-									<input
-											class="max-price"
-											type="text"
-											name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"
-											id="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"
-											value="<?echo $arItem["VALUES"]["MAX"]["HTML_VALUE"]?>"
-											size="5"
-											onkeyup="smartFilter.keyup(this)"
-									/>
-								</div></div>
-							<div style="clear: both;"></div>
-						</div>
-						<div class="bx_ui_slider_track" id="drag_track_<?=$key?>">
-							<div class="bx_ui_slider_range" style="left: 0; right: 0;"  id="drag_tracker_<?=$key?>"></div>
-							<a class="bx_ui_slider_handle left"  href="javascript:void(0)" style="left:0;" id="left_slider_<?=$key?>"></a>
-							<a class="bx_ui_slider_handle right" href="javascript:void(0)" style="right:0%;" id="right_slider_<?=$key?>"></a>
-						</div>
-						<div class="bx_filter_param_area">
-							<div class="bx_filter_param_area_block" id="curMinPrice_<?=$key?>"><?
-								if (isset($arItem["VALUES"]["MIN"]["CURRENCY"]))
-									echo CCurrencyLang::CurrencyFormat($arItem["VALUES"]["MIN"]["VALUE"], $arItem["VALUES"]["MIN"]["CURRENCY"], false);
-								else
-									echo $arItem["VALUES"]["MIN"]["VALUE"];
-								?></div>
-							<div class="bx_filter_param_area_block" id="curMaxPrice_<?=$key?>"><?
-								if (isset($arItem["VALUES"]["MAX"]["CURRENCY"]))
-									echo CCurrencyLang::CurrencyFormat($arItem["VALUES"]["MAX"]["VALUE"], $arItem["VALUES"]["MAX"]["CURRENCY"], false);
-								else
-									echo $arItem["VALUES"]["MAX"]["VALUE"];
-								?></div>
-							<div style="clear: both;"></div>
-						</div>
-					</div>
-
-				<?/*
-				$arFilter = array(
-						'IBLOCK_ID' => 5, // выборка элементов из инфоблока с ИД равным «5»
-						'ACTIVE' => 'Y',// выборка только активных элементов
-
-				);
-
-				$res = CIBlockElement::GetList(
-						array('ID' => 380 ),
-						$arFilter,
-						false,
-						false,
-						array()
-				);
-
-				while ($element = $res->GetNext()) {
-					echo "<pre>";
-					print_r($element);
-					echo "</pre>";
-				}*/
-				?>
-
-
-					<script type="text/javascript" defer="defer">
-						var DoubleTrackBar<?=$key?> = new cDoubleTrackBar('drag_track_<?=$key?>', 'drag_tracker_<?=$key?>', 'left_slider_<?=$key?>', 'right_slider_<?=$key?>', {
-							OnUpdate: function(){
-								BX("<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>").value = this.MinPos;
-								BX("<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>").value = this.MaxPos;
-							},
-							Min: parseFloat(<?=$arItem["VALUES"]["MIN"]["VALUE"]?>),
-							Max: parseFloat(<?=$arItem["VALUES"]["MAX"]["VALUE"]?>),
-							MinInputId : BX('<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>'),
-							MaxInputId : BX('<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>'),
-							FingerOffset: 8,
-							MinSpace: 1,
-							RoundTo: 0.01,
-							Precision: 2
-						});
-					</script>
-				<?endif;
-			endforeach;
-
-
+			
 			foreach($arResult["ITEMS"] as $key=>$arItem):
 
+				//$arLinkItem = $arItem['DISPLAY_PROPERTIES']['PR_FILTERS']['LINK_ELEMENT_VALUE'];
+
+				/*<?foreach($arLinkItem as $key => $val) echo '<img title="'.$val['NAME'].'" class="usable-img clearfix" src="'.CFile::GetPath($val['DETAIL_PICTURE']).'" >'; ?>*/
 
 
 				if($arItem["PROPERTY_TYPE"] == "N" ):
@@ -151,6 +57,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParam
 									/>
 								</div>
 							</div>
+
 							<div class="bx_filter_param_area_block"><div class="bx_input_container">
 									<input
 											class="max-price"
@@ -161,7 +68,8 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParam
 											size="5"
 											onkeyup="smartFilter.keyup(this)"
 									/>
-								</div></div>
+								</div>
+							</div>
 							<div style="clear: both;"></div>
 						</div>
 						<div class="bx_ui_slider_track" id="drag_track_<?=$key?>">
@@ -196,22 +104,46 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParam
 				<?elseif(!empty($arItem["VALUES"]) && !isset($arItem["PRICE"])):?>
 
 					<div class="bx_filter_container">
-						<span class="bx_filter_container_title" onclick="hideFilterProps(this)"><?=$arItem["NAME"]?></span>
-						<div class="bx_filter_block" style=" opacity: 0; height: 0px; overflow:hidden;">
+						<p class="bx_filter_container_title" onclick="hideFilterProps(this)">
+							Тип упаковки:
+						</p>
 
+
+						<div class="bx_filter_block clearfix" style=" opacity: 1;">
 							<?foreach($arItem["VALUES"] as $val => $ar):?>
+								<?
+								$arSelect = array(
+										"NAME",
+										"DETAIL_PICTURE",
+								);
 
-								<span class="<?echo $ar["DISABLED"] ? 'disabled': ''?>">
+								$arFilter = array (
+										"ID" => $val,
+										"IBLOCK_ID"=> 5,
+										"ACTIVE" => "Y",
+								);
 
-							<input
-									type="checkbox"
-									value="<?echo $ar["HTML_VALUE"]?>"
-									name="<?echo $ar["CONTROL_NAME"]?>"
-									id="<?echo $ar["CONTROL_ID"]?>"
-									<?echo $ar["CHECKED"]? 'checked="checked"': ''?>
-							/>
-							<label for="<?echo $ar["CONTROL_ID"]?>"><?echo $ar["VALUE"];?></label>
-						</span>
+
+
+								$arOrder = array();
+
+
+								$properties = CIBlockElement::GetList($arOrder, $arFilter, false, false, $arSelect);
+
+
+								while ($prop_fields = $properties->GetNext())
+								{?>
+									<div class="filter-element" title="<?=$prop_fields['NAME']?>">
+										<span class="<?echo $ar["DISABLED"] ? 'disabled': ''?> clearfix">
+											<img class="filter-img" src="<? echo (CFile::GetPath($prop_fields['DETAIL_PICTURE'])); ?>">
+											<input type="checkbox" value="<?echo $ar["HTML_VALUE"]?>" name="<?echo $ar["CONTROL_NAME"]?>" id="<?echo $ar["CONTROL_ID"]?>" <?echo $ar["CHECKED"]? 'checked="checked"': ''?> />
+											<label for="<?echo $ar["CONTROL_ID"]?>">
+												<?echo $ar["VALUE"];?>
+											</label>
+
+										</span>
+									</div>
+								<? } ?>
 							<?endforeach;?>
 						</div>
 					</div>

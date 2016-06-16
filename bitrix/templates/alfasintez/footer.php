@@ -6,9 +6,6 @@
     <div class="row">
         <div class="footer-sep"></div>
         </div>
-
-        <div class="container">
-
                 <?
                     // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
                     $APPLICATION->IncludeComponent(
@@ -25,7 +22,6 @@
                         )
                     );
                     ?>
-    </div>
     </div>
 </div>
 

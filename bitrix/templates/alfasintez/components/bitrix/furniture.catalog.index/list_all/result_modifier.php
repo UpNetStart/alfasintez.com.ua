@@ -266,6 +266,8 @@ if (!empty($arResult['ITEMS']))
 
 					CIBlockPriceTools::setRatioMinPrice($arOffer);
 
+
+
 					$offerPictures = CIBlockPriceTools::getDoublePicturesForItem($arOffer, $arParams['OFFER_ADD_PICT_PROP']);
 					$arOffer['OWNER_PICT'] = empty($offerPictures['PICT']);
 					$arOffer['PREVIEW_PICTURE'] = false;

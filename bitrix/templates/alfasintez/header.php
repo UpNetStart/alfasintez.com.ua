@@ -91,26 +91,27 @@ $curPage = $APPLICATION->GetCurPage(true);
 
                     <div class="cart header-elements-wrapper">
                         <?$APPLICATION->IncludeComponent(
-                            "bitrix:sale.basket.basket.line",
-                            "top-cart",
-                            Array(
-                                "PATH_TO_BASKET" => SITE_DIR."personal/cart/",
-                                "PATH_TO_PERSONAL" => SITE_DIR."personal/",
-                                "SHOW_PERSONAL_LINK" => "N",
-                                "SHOW_NUM_PRODUCTS" => "Y",
-                                "SHOW_TOTAL_PRICE" => "Y",
-                                "SHOW_EMPTY_VALUES" => "Y",
-                                "SHOW_PRODUCTS" => "Y",
-                                "POSITION_FIXED" => "N",
-                                "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
-                                "SHOW_DELAY" => "Y",
-                                "SHOW_NOTAVAIL" => "Y",
-                                "SHOW_SUBSCRIBE" => "Y",
-                                "SHOW_IMAGE" => "Y",
-                                "SHOW_PRICE" => "Y",
-                                "SHOW_SUMMARY" => "Y"
-                            )
-                        );?>
+	"bitrix:sale.basket.basket.line", 
+	"top-cart", 
+	array(
+		"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
+		"SHOW_PERSONAL_LINK" => "N",
+		"SHOW_NUM_PRODUCTS" => "Y",
+		"SHOW_TOTAL_PRICE" => "Y",
+		"SHOW_EMPTY_VALUES" => "Y",
+		"SHOW_PRODUCTS" => "N",
+		"POSITION_FIXED" => "N",
+		"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+		"SHOW_DELAY" => "Y",
+		"SHOW_NOTAVAIL" => "Y",
+		"SHOW_SUBSCRIBE" => "Y",
+		"SHOW_IMAGE" => "Y",
+		"SHOW_PRICE" => "Y",
+		"SHOW_SUMMARY" => "Y"
+	),
+	false
+);?>
                     </div>
                     <div class="cart-wrapper-space pull-right"></div>
 
@@ -156,6 +157,6 @@ $curPage = $APPLICATION->GetCurPage(true);
                 "SITE_ID" => "-"
             ),
                 false,
-                Array('HIDE_ICONS' => 'Y')
+                Array('HIDE_ICONS' => 'N')
             );?>
     </div>
