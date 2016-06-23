@@ -128,7 +128,8 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		}
 	}
 ?>
-		</div></div>
+		</div>
+		</div>
 <?
 	if (!isset($arItem['OFFERS']) || empty($arItem['OFFERS']))
 	{

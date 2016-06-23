@@ -318,8 +318,11 @@ h1, h2, h3, h4{
 }
 
 .partners-group{
-    width: 70%;
-    margin: 0 auto;
+    text-align: center;
+}
+
+.bx_ordercart_order_sum > tbody > tr:first-child{
+    display: none;
 }
 
 
@@ -383,9 +386,47 @@ h1, h2, h3, h4{
     height: auto;
     margin: 10px 20px 15px 0;
 }
+.bx_catalog_item.double:hover{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+
+#animated-example {
+    width: 300px;
+    height: 200px;
+    border: solid 1px #1A7404;
+    position: absolute;
+    background-color: #62A80A;
+}
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.1); }
+    100% { -webkit-transform: scale(1); }
+}
+
+@keyframes pulse {
+     0% { transform: scale(1); }
+     50% { transform: scale(1.1); }
+     100% { transform: scale(1); }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+
+.bx_catalog_item.double:hover{
+    border: none;
+}
 .bx_catalog_item.double{
     background-color: rgb(251,249,212);
-   /* border: 5px solid rgba(9, 9, 13, 0.2); */
+    border: 1px solid rgba(9, 9, 13, 0.2);
+    padding: 1% 5% !important;
    }
 
 .box-size-wrapper.pull-right{
@@ -563,7 +604,63 @@ a.bx_bt_button.bx_medium{
     font-size: 100% !important;
 }
 
+.box-size-item{
+
+}
+
+
+
+
+
 /*---------- END CONTENT BLOCK ----------*/
+.cd-panel {
+    /*...*/
+    visibility: hidden;
+    transition: visibility 0s 0.6s;
+}
+
+.cd-panel.is-visible {
+    visibility: visible;
+    transition: visibility 0s 0s;
+}
+
+.cd-panel-header {
+    /*...*/
+    position: fixed;
+    top: -50px;
+    width: 90%;
+    height: 50px;
+    transition: top 0.3s 0s;
+}
+
+.is-visible .cd-panel-header {
+    top: 0;
+    transition: top 0.3s 0.3s;
+}
+
+.cd-panel-container {
+    /*...*/
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    top: 0;
+    right: 0;
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
+
+    transform: translate3d(100%, 0, 0);
+}
+
+.is-visible .cd-panel-container {
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0s;
+}
+
+
+/*----------------------------------------*/
+
 
 /*---------- FOOTER BLOCK ----------*/
 #footer-wrapper{

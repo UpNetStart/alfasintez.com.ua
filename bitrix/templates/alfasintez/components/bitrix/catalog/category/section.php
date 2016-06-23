@@ -108,10 +108,7 @@ if ($verticalGrid)
 {
 	?><div class="bx_content_section"><?
 }
-?>
-
-
-<?
+?><?
 if($arParams["USE_COMPARE"]=="Y")
 {
 	?><?$APPLICATION->IncludeComponent(
@@ -129,7 +126,9 @@ if($arParams["USE_COMPARE"]=="Y")
 }
 
 $intSectionID = 0;
-?><?$intSectionID = $APPLICATION->IncludeComponent(
+?>
+
+<?$intSectionID = $APPLICATION->IncludeComponent(
 	"bitrix:catalog.section",
 	"",
 	array(
