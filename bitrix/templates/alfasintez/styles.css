@@ -572,8 +572,12 @@ a.bx_bt_button.bx_medium{
     list-style: none;
 }
 
-.category-recommend-label > li{
-    display: inline-block;
+.category-recommend-label > li > img{
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: -20px;
+    text-align: center;
+    width: 30px;
 }
 
 .item_current_price{
@@ -611,9 +615,10 @@ a.bx_bt_button.bx_medium{
 
 .sub-category-menu img{
     float: left;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: auto;
     display: inline-block;
+    margin-top:-5px;
 }
 
 
@@ -631,15 +636,15 @@ a.bx_bt_button.bx_medium{
     -webkit-box-shadow: inset 0px 20px 19px 10px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 20px 19px 10px rgba(0,0,0,0.5);
     box-shadow: inset 0px 20px 19px 10px rgba(0,0,0,0.5);
-    transition: 1.5s;
+    transition: 0.5s;
 }
 .sub-category-menu > li{
     position: relative;
-    width: auto;
+    width: 20%;
     display: inline-block;
     border-radius:10px  10px  0 0;
     background: rgb(47,181,229);
-    margin-left:15px;
+    margin: 10px auto -10px !important;
     opacity: 0.7;
 }
 
@@ -647,6 +652,7 @@ a.bx_bt_button.bx_medium{
     list-style: none;
     position: relative;
     padding: 0 !important;
+    width: 100%;
 }
 
 .sub-category-menu a:hover{text-decoration: none}
@@ -667,8 +673,43 @@ a.bx_bt_button.bx_medium{
     text-align: center;
     opacity: 1 !important;
     color: rgb(225,245,252) !important;
+    margin-left:10px !important;
 }
 
+.section-top{
+    border-bottom: 1px solid rgba(9, 9, 13, 0.2);
+    width: 100%;
+    margin-bottom:5px;
+}
+
+.product-sizing > .char-title{
+    text-align: left !important;
+    float: left;
+    display: block;
+}
+
+.product-char{
+    text-align: center !important;
+}
+
+.products-sizing-wrapper{
+    padding: 0 -20px;
+    margin-top:-15%;
+    text-align: right;
+    font-weight:600 !important;
+    font-size: 13px !important;
+}
+
+.char-title{
+    color: #337ab7 !important;
+    font-weight:600 !important;
+    font-size: 13px !important;
+}
+
+
+.category-color-change{
+    display: none;
+}
 /*---------- END CONTENT BLOCK ----------*/
 
 /*----------------------------------------*/

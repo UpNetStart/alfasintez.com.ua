@@ -15,9 +15,6 @@
 /* $arItem['CATALOG_HEIGHT'] -> Высота */
 /* $arItem['CATALOG_WIDTH'] -> Ширина */
 /* $arItem['CATALOG_LENGHT'] -> Длина */
-
-$this->setFrameMode(true);
-
 echo '
 <div class="sub-category-menu-wrapper">
 	<ul class="sub-category-menu clearfix">
@@ -27,6 +24,10 @@ echo '
 	</ul>
 </div>
 ';
+
+$this->setFrameMode(false);
+
+
 
 if (!empty($arResult['ITEMS']))
 {
@@ -165,6 +166,51 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 			<a href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" title="<? echo $productTitle; ?>"><? echo $productTitle; ?></a>
 		</div>
 
+		<?
+		$arItem['MIN_PRICE']['PRINT_DISCOUNT_VALUE'] = $arItem['PROPERTIES']['PR_IN_THE_BOX']['VALUE']*$arItem['CATALOG_WEIGHT'] * $arItem['MIN_PRICE']['PRINT_VALUE']*(70/1000);
+
+
+
+
+		$arItem['PROPERTIES']['PR_COLOR_PRICE']['VALUE'];
+		$arItem['PROPERTIES']['PR_OPACITY_PRICE']['VALUE'];
+
+		$resultPrice = $arItem['PROPERTIES']['PR_IN_THE_BOX']['VALUE']*($arItem['CATALOG_WEIGHT'] *($arItem['PROPERTIES']['PR_OPACITY_PRICE']['VALUE']/1000));
+
+		if($arItem['MIN_PRICE']['PRINT_VALUE'] == 0){
+			echo "<div class='price-not-available pull-left' style='margin-top: 5px;'>";
+			echo "Нет на складе";
+		}else{
+			echo "<div class='price-wrapper pull-left'>";
+			echo $arItem['MIN_PRICE']['PRINT_VALUE'];
+		}
+		echo "</div>
+";
+		?>
+
+		<ul class="category-recommend-label  pull-right">
+			<? $arLinkElementsID = $arItem['PROPERTIES']['PR_FILTERS']['VALUE']; ?>
+			<?
+			foreach($arLinkElementsID as $arLinkElement){
+				$arFilter = array(
+						'IBLOCK_ID' => 5, // выборка элементов из инфоблока с ИД равным «5»
+						'ACTIVE' => 'Y',  // выборка только активных элементов
+						'ID' => $arLinkElement
+				);
+
+				$res = CIBlockElement::GetList(array(), $arFilter, false, false, array('NAME','DETAIL_PICTURE'));
+
+
+				// вывод элементов
+				while ($element = $res->GetNext()) {?>
+					<?= '<li><img src="'.CFile::GetPath($element['DETAIL_PICTURE']).'" alt="'.$element['NAME'].' ООО Альфа Синтез" title="'.$element['NAME'].'"></li>' ?>
+				<?}
+			}?>
+		</ul>
+
+
+
+
 			<a id="<? echo $arItemIDs['PICT']; ?>" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" class="bx_catalog_item_images" style="background-image: url('<? echo $arItem['PREVIEW_PICTURE']['SRC']; ?>')" title="<? echo $imgTitle; ?>"><?
 	if ('Y' == $arParams['SHOW_DISCOUNT_PERCENT'])
 	{
@@ -230,34 +276,30 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		}
 		else
 		{
+			$productVols = 	round((($arItem['CATALOG_WIDTH'] * $arItem['CATALOG_LENGTH'] * $arItem['CATALOG_HEIGHT']) * 0.001), 0);
 
 
-
-			echo "<div class='box-size-wrapper pull-right'>";
 			if(($arItem['CATALOG_WIDTH'] != 0)||($arItem['CATALOG_LENGTH'] != 0)) {
-				echo $arItem['CATALOG_WIDTH'] . "x" . $arItem['CATALOG_LENGTH'] . "x" . $arItem['CATALOG_HEIGHT'] . " mm.<br>";
+				?>
+				<div class="products-sizing-wrapper">
+					<div class="section-top">
+
+						<div class="product-sizing"><b class="char-title">Ширина продукции:</b><?=$arItem['CATALOG_WIDTH']?> мм.</div>
+						<div class="product-sizing"><b class="char-title">Длина продукции:</b><?=$arItem['CATALOG_LENGTH']?> мм.</div>
+						<div class="product-sizing"><b class="char-title">Высота продукции:</b><?=$arItem['CATALOG_HEIGHT']?> мм.</div>
+
+					</div>
+					<div class="product-char">
+						<b class="char-title" style="text-align: left !important;">Общий объём</b> - <?=$productVols?> мл.
+					</div>
+				<?
 			}
 			echo "</div>";
 
-			$arItem['MIN_PRICE']['PRINT_DISCOUNT_VALUE'] = $arItem['PROPERTIES']['PR_IN_THE_BOX']['VALUE']*$arItem['CATALOG_WEIGHT'] * $arItem['MIN_PRICE']['PRINT_VALUE']*(70/1000);
 
 
 
 
-			$arItem['PROPERTIES']['PR_COLOR_PRICE']['VALUE'];
-			$arItem['PROPERTIES']['PR_OPACITY_PRICE']['VALUE'];
-
-			$resultPrice = $arItem['PROPERTIES']['PR_IN_THE_BOX']['VALUE']*($arItem['CATALOG_WEIGHT'] *($arItem['PROPERTIES']['PR_OPACITY_PRICE']['VALUE']/1000));
-
-			if($arItem['MIN_PRICE']['PRINT_VALUE'] == 0){
-					echo "<div class='price-not-available pull-left' style='margin-top: 5px;'>";
-					echo "Нет на складе";
-			}else{
-					echo "<div class='price-wrapper pull-left'>";
-					echo $arItem['MIN_PRICE']['PRINT_VALUE'];
-			}
-			echo "</div>
-<br>";
 
 		}
 		if ('Y' == $arParams['SHOW_OLD_PRICE'] && $arItem['MIN_PRICE']['DISCOUNT_VALUE'] < $arItem['MIN_PRICE']['VALUE'])
@@ -277,7 +319,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 			if ('Y' == $arParams['USE_PRODUCT_QUANTITY'])
 			{
 			?>
-		<div class="bx_catalog_item_controls_blockone">
+		<div class="bx_catalog_item_controls_blockone pull-left">
 			<div style="display: inline-block;position: relative;">
 
 			<a id="<? echo $arItemIDs['QUANTITY_DOWN']; ?>" href="javascript:void(0)" class="bx_bt_button_type_2 bx_small" rel="nofollow">-
@@ -296,7 +338,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 			}
 			?>
 				<?/*Кнопка отправки заказа*/?>
-		<div id="buy-link-btn-container" class="bx_catalog_item_controls_blocktwo">
+		<div id="buy-link-btn-container" style="max-width: 45%" class="bx_catalog_item_controls_blocktwo  pull-right">
 			<a id="<? echo $arItemIDs['BUY_LINK']; ?>" class="bx_bt_button bx_medium" href="javascript:void(0)" rel="nofollow"><?
 			echo ('' != $arParams['MESS_BTN_BUY'] ? $arParams['MESS_BTN_BUY'] : GetMessage('CT_BCS_TPL_MESS_BTN_BUY'));
 			?>
@@ -308,7 +350,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		{
 			?>
 
-			<div class="bx_catalog_item_controls_blockone">
+			<div class="bx_catalog_item_controls_blockone pull-left" style="max-width: 45%">
 				<span class="bx_notavailable"><?
 				echo ('' != $arParams['MESS_NOT_AVAILABLE'] ? $arParams['MESS_NOT_AVAILABLE'] : GetMessage('CT_BCS_TPL_MESS_PRODUCT_NOT_AVAILABLE'));
 				?>
@@ -334,27 +376,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 ?>
 			<div class="bx_catalog_item_articul">
 
-			<strong style="text-align: center">Рекомендуем для:</strong>
-			<div style="clear:both"></div>
-			<ul class="category-recommend-label">
-				<? $arLinkElementsID = $arItem['PROPERTIES']['PR_FILTERS']['VALUE']; ?>
-			<?
-			foreach($arLinkElementsID as $arLinkElement){
-			$arFilter = array(
-			'IBLOCK_ID' => 5, // выборка элементов из инфоблока с ИД равным «5»
-			'ACTIVE' => 'Y',  // выборка только активных элементов
-			'ID' => $arLinkElement
-			);
 
-			$res = CIBlockElement::GetList(array(), $arFilter, false, false, array('NAME','DETAIL_PICTURE'));
-
-
-			// вывод элементов
-			while ($element = $res->GetNext()) {?>
-						<?= '<li><img src="'.CFile::GetPath($element['DETAIL_PICTURE']).'" alt="" style="height:25px; width:25px;" title="'.$element['NAME'].'"></li>' ?>
-					<?}
-			}?>
-			</ul>
 
 <?
 			foreach ($arItem['DISPLAY_PROPERTIES'] as $arOneProp) {
@@ -363,10 +385,10 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 
 
 
-				<strong style="text-align: center"> <? echo $arOneProp['NAME']; ?> </strong>
+				<strong style="text-align: center"> <? //echo $arOneProp['NAME']; ?> </strong>
 				<?
 
-					if(is_array($arOneProp['DISPLAY_VALUE'])) foreach($arOneProp['DISPLAY_VALUE'] as $disp) echo "<li>" . $disp . "</li>"; else echo "<li>" . $arOneProp['DISPLAY_VALUE'] . "</li>";
+					//if(is_array($arOneProp['DISPLAY_VALUE'])) foreach($arOneProp['DISPLAY_VALUE'] as $disp) echo "<li>" . $disp . "</li>"; else echo "<li>" . $arOneProp['DISPLAY_VALUE'] . "</li>";
 			}
 ?>
 			</div>
@@ -393,15 +415,15 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 			if (!$emptyProductProperties)
 			{
 ?>
-				<table style="margin: 5px auto; color: rgba(9, 9, 13, 0.4);">
+				<table  class="" style="margin: 5px auto; color: rgba(9, 9, 13, 0.4);">
 <?
 					foreach ($arItem['PRODUCT_PROPERTIES'] as $propID => $propInfo)
 					{
 ?>
-						<th style="text-align: center; margin-bottom: 3px;"><? echo $arItem['PROPERTIES'][$propID]['NAME']; ?></th>
+						<th class="category-color-change" style="text-align: center; margin-bottom: 3px;"><? echo $arItem['PROPERTIES'][$propID]['NAME']; ?></th>
 						<tr>
 
-							<td>
+							<td class="category-color-change">
 <?
 								if(
 									'L' == $arItem['PROPERTIES'][$propID]['PROPERTY_TYPE'] && 'C' == $arItem['PROPERTIES'][$propID]['LIST_TYPE']
@@ -415,14 +437,15 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 									}
 								}
 								else
-								{
-									?><select  name="<? echo $arParams['PRODUCT_PROPS_VARIABLE']; ?>[<? echo $propID; ?>]"><?
+								{?>
+									<select type="hidden"  name="<? echo $arParams['PRODUCT_PROPS_VARIABLE']; ?>[<? echo $propID; ?>]"><?
 									foreach($propInfo['VALUES'] as $valueID => $value)
 									{
 										?>
 										<option  value="<? echo $valueID; ?>" <? echo ($valueID == $propInfo['SELECTED'] ? 'selected' : ''); ?>><? echo $value; ?></option><?
 									}
-									?></select>
+									?>
+									</select>
 
 									<?
 								}

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="61d9ac78-3e14-4292-a95c-070992928293" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/style.css" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/template.php" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css" afterPath="$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css" />
     </list>
@@ -410,131 +411,87 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5412844">
+    <splitter split-orientation="horizontal" split-proportion="0.53058594">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/template.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5049505">
-                  <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.2503536">
+                  <caret line="321" column="63" selection-start-line="321" selection-start-column="63" selection-end-line="321" selection-end-column="63" />
                   <folding>
-                    <element signature="e#2282#2653#0#PHP" expanded="false" />
-                    <element signature="e#3042#3414#0#PHP" expanded="false" />
-                    <element signature="e#3267#3414#0#PHP" expanded="false" />
-                    <element signature="e#3741#4237#0#PHP" expanded="false" />
-                    <element signature="e#4666#4749#0#PHP" expanded="false" />
-                    <element signature="n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#5146#24197#0#PHP" expanded="false" />
-                    <element signature="e#5446#6220#0#PHP" expanded="false" />
-                    <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                    <element signature="e#1811#1959#0#PHP" expanded="false" />
+                    <element signature="e#2284#2655#0#PHP" expanded="false" />
+                    <element signature="e#2995#4575#0#PHP" expanded="false" />
+                    <element signature="e#3044#3416#0#PHP" expanded="false" />
+                    <element signature="e#3269#3416#0#PHP" expanded="false" />
+                    <element signature="e#3743#4239#0#PHP" expanded="false" />
+                    <element signature="e#4668#4751#0#PHP" expanded="false" />
+                    <element signature="e#5448#6222#0#PHP" expanded="false" />
                     <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#7335#7639#0#PHP" expanded="false" />
-                    <element signature="e#7641#7844#0#PHP" expanded="false" />
-                    <element signature="e#7859#8815#0#PHP" expanded="false" />
+                    <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="e#8792#9096#0#PHP" expanded="false" />
+                    <element signature="e#9098#9301#0#PHP" expanded="false" />
+                    <element signature="e#9316#10272#0#PHP" expanded="false" />
                     <element signature="n#a#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#8262#8581#0#PHP" expanded="false" />
-                    <element signature="e#8584#8798#0#PHP" expanded="false" />
-                    <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#8924#10674#0#PHP" expanded="false" />
-                    <element signature="e#8963#10479#0#PHP" expanded="false" />
-                    <element signature="e#9078#9452#0#PHP" expanded="false" />
-                    <element signature="e#9135#9447#0#PHP" expanded="false" />
-                    <element signature="e#9226#9441#1#PHP" expanded="false" />
-                    <element signature="e#9289#9434#0#PHP" expanded="false" />
-                    <element signature="e#9460#10479#0#PHP" expanded="false" />
-                    <element signature="e#9528#9720#0#PHP" expanded="false" />
-                    <element signature="e#10184#10451#0#PHP" expanded="false" />
-                    <element signature="e#10343#10451#0#PHP" expanded="false" />
-                    <element signature="e#10482#10671#0#PHP" expanded="false" />
-                    <element signature="e#10702#24178#0#PHP" expanded="false" />
-                    <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#10811#12729#0#PHP" expanded="false" />
-                    <element signature="e#10842#11628#0#PHP" expanded="false" />
-                    <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#a#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#12015#12729#0#PHP" expanded="false" />
-                    <element signature="n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#span#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#12296#12725#0#PHP" expanded="false" />
-                    <element signature="n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#a#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#12781#14080#0#PHP" expanded="false" />
-                    <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#ul#0;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#13137#13699#0#PHP" expanded="false" />
-                    <element signature="e#13198#13364#0#PHP" expanded="false" />
-                    <element signature="e#13495#13694#0#PHP" expanded="false" />
-                    <element signature="e#13718#14060#0#PHP" expanded="false" />
-                    <element signature="e#14149#16266#0#PHP" expanded="false" />
-                    <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#14339#14758#0#PHP" expanded="false" />
-                    <element signature="e#14396#14753#0#PHP" expanded="false" />
-                    <element signature="e#14829#16247#0#PHP" expanded="false" />
-                    <element signature="n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#14941#16108#0#PHP" expanded="false" />
-                    <element signature="n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#td#0;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#15164#16069#0#PHP" expanded="false" />
-                    <element signature="e#15315#15654#0#PHP" expanded="false" />
-                    <element signature="n#label#0;n#td#0;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#15673#16069#0#PHP" expanded="false" />
-                    <element signature="n#select#0;n#td#0;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#15796#16025#0#PHP" expanded="false" />
-                    <element signature="n#script#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#16175#16223#0#HTML" expanded="false" />
-                    <element signature="e#16284#17835#0#PHP" expanded="false" />
-                    <element signature="e#16498#17093#1#PHP" expanded="false" />
-                    <element signature="e#17110#17343#1#PHP" expanded="false" />
-                    <element signature="e#17360#17785#1#PHP" expanded="false" />
-                    <element signature="n#script#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#18032#24178#0#PHP" expanded="false" />
-                    <element signature="e#18042#19484#0#PHP" expanded="false" />
-                    <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#18157#18811#0#PHP" expanded="false" />
-                    <element signature="n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#div#1;n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#a#0;n#div#1;n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#19178#19484#0#PHP" expanded="false" />
-                    <element signature="n#div#6;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#a#0;n#div#6;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#div#7;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#a#0;n#div#7;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#19986#20590#0#PHP" expanded="false" />
-                    <element signature="n#div#8;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#20090#20436#0#PHP" expanded="false" />
-                    <element signature="e#20126#20431#0#PHP" expanded="false" />
-                    <element signature="e#20440#20570#0#PHP" expanded="false" />
-                    <element signature="e#20593#24175#0#PHP" expanded="false" />
-                    <element signature="e#20646#24171#0#PHP" expanded="false" />
-                    <element signature="n#div#9;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="e#20800#21017#0#PHP" expanded="false" />
-                    <element signature="e#21022#21322#0#PHP" expanded="false" />
-                    <element signature="e#21173#21315#0#PHP" expanded="false" />
-                    <element signature="e#21327#21542#0#PHP" expanded="false" />
-                    <element signature="e#21583#22154#0#PHP" expanded="false" />
-                    <element signature="e#21631#22148#0#PHP" expanded="false" />
-                    <element signature="e#21724#22068#0#PHP" expanded="false" />
-                    <element signature="e#21785#22060#0#PHP" expanded="false" />
-                    <element signature="e#22173#23998#0#PHP" expanded="false" />
-                    <element signature="e#22651#22771#1#PHP" expanded="false" />
-                    <element signature="e#22790#23530#1#PHP" expanded="false" />
-                    <element signature="e#23549#23726#1#PHP" expanded="false" />
-                    <element signature="e#23746#23818#1#PHP" expanded="false" />
-                    <element signature="n#script#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#script#0;n#!!top" expanded="false" />
-                    <element signature="e#24283#25522#0#HTML" expanded="false" />
-                    <element signature="e#25542#25628#0#PHP" expanded="false" />
-                    <marker date="1466722317510" expanded="true" signature="2252:2273" placeholder="..." />
-                    <marker date="1466722317510" expanded="false" signature="10291:10307" placeholder="..." />
-                    <marker date="1466722317510" expanded="false" signature="13621:13645" placeholder="..." />
+                    <element signature="e#9719#10038#0#PHP" expanded="false" />
+                    <element signature="e#10041#10255#0#PHP" expanded="false" />
+                    <element signature="e#10535#10909#0#PHP" expanded="false" />
+                    <element signature="e#10592#10904#0#PHP" expanded="false" />
+                    <element signature="e#10683#10898#1#PHP" expanded="false" />
+                    <element signature="e#10746#10891#0#PHP" expanded="false" />
+                    <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                    <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="e#16446#16675#0#PHP" expanded="false" />
+                    <element signature="n#style#0;n#span#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="e#21682#21982#0#PHP" expanded="false" />
+                    <element signature="e#21833#21975#0#PHP" expanded="false" />
+                    <element signature="e#21987#22202#0#PHP" expanded="false" />
+                    <element signature="e#22243#22814#0#PHP" expanded="false" />
+                    <element signature="e#22291#22808#0#PHP" expanded="false" />
+                    <element signature="e#22384#22728#0#PHP" expanded="false" />
+                    <element signature="e#22833#24658#0#PHP" expanded="false" />
+                    <element signature="e#23311#23431#1#PHP" expanded="false" />
+                    <element signature="e#23450#24190#1#PHP" expanded="false" />
+                    <element signature="e#24209#24386#1#PHP" expanded="false" />
+                    <element signature="e#24406#24478#1#PHP" expanded="false" />
+                    <element signature="n#script#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                    <element signature="n#script#0;n#div#0;n#!!top" expanded="false" />
+                    <element signature="e#24943#26182#0#HTML" expanded="false" />
+                    <marker date="1466738979923" expanded="true" signature="643:1147" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="684:1140" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="2254:2275" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="7654:7670" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="12086:12103" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="12238:12328" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="12255:12296" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="12297:12328" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="13072:13102" placeholder="..." />
+                    <marker date="1466738979923" expanded="false" signature="13439:13487" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="13474:13487" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="13803:13834" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="14105:14117" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="14269:14272" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="14366:14384" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="15461:15506" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="15507:15533" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="15638:15677" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="15744:15812" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="15787:15812" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="16042:16098" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="16796:16805" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="18563:18684" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="18806:18820" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="18922:18952" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="19526:19556" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="19795:19807" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="19901:19968" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="20195:20262" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="20742:20802" placeholder="..." />
+                    <marker date="1466738979923" expanded="true" signature="20871:20889" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -554,11 +511,31 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/sale.order.ajax/order_cart/template.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-5.8076925">
+                  <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.32107496">
-                  <caret line="626" column="1" selection-start-line="626" selection-start-column="1" selection-end-line="626" selection-end-column="1" />
+                <state vertical-scroll-proportion="0.46817538">
+                  <caret line="618" column="16" selection-start-line="618" selection-start-column="16" selection-end-line="618" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-3.8846154">
+                  <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -643,15 +620,15 @@
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/sale.order.ajax/order_cart/props.php" />
         <option value="$PROJECT_DIR$/index_local.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/style.css" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.top/.default/section/style.css" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/list/template.php" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/sale.basket.basket/alfa/basket_items.php" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/section.php" />
         <option value="$PROJECT_DIR$/bitrix/components/bitrix/catalog/templates/.default/bitrix/catalog.section/.default/template.php" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/sale.basket.basket/alfa/template.php" />
-        <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css" />
         <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/template.php" />
+        <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/style.css" />
+        <option value="$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css" />
       </list>
     </option>
   </component>
@@ -944,204 +921,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez.com.ua">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez.com.ua">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez.com.ua">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez.com.ua">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="components">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez.com.ua">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="components">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="catalog">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez.com.ua">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="components">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="catalog">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="category">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez.com.ua">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="alfasintez">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="components">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="catalog">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="category">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="bitrix">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1239,7 +1018,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13059701" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17217484" sideWeight="0.6824877" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20260021" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33694476" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17910448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22751896" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.19364598" sideWeight="0.31751227" order="1" side_tool="true" content_ui="tabs" />
@@ -1284,7 +1063,8 @@
     <MESSAGE value="site complite 90%" />
     <MESSAGE value="site complite 97%" />
     <MESSAGE value="site complite 99%" />
-    <option name="LAST_COMMIT_MESSAGE" value="site complite 99%" />
+    <MESSAGE value="sub category  menu complite" />
+    <option name="LAST_COMMIT_MESSAGE" value="sub category  menu complite" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.7238806" />
   </component>
   <component name="XDebuggerManager">
@@ -1301,7 +1081,7 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="46" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1490,13 +1270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/sale.order.ajax/order_cart/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="49.576923">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-28.846153">
@@ -1508,13 +1281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.2">
           <caret line="112" column="21" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.769231">
-          <caret line="235" column="95" selection-start-line="235" selection-start-column="95" selection-end-line="235" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -1642,6 +1408,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/sale.order.ajax/order_cart/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8076925">
+          <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
@@ -1650,136 +1424,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css">
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32107496">
-          <caret line="626" column="1" selection-start-line="626" selection-start-column="1" selection-end-line="626" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.2503536">
+          <caret line="321" column="63" selection-start-line="321" selection-start-column="63" selection-end-line="321" selection-end-column="63" />
+          <folding>
+            <element signature="e#1811#1959#0#PHP" expanded="false" />
+            <element signature="e#2284#2655#0#PHP" expanded="false" />
+            <element signature="e#2995#4575#0#PHP" expanded="false" />
+            <element signature="e#3044#3416#0#PHP" expanded="false" />
+            <element signature="e#3269#3416#0#PHP" expanded="false" />
+            <element signature="e#3743#4239#0#PHP" expanded="false" />
+            <element signature="e#4668#4751#0#PHP" expanded="false" />
+            <element signature="e#5448#6222#0#PHP" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#8792#9096#0#PHP" expanded="false" />
+            <element signature="e#9098#9301#0#PHP" expanded="false" />
+            <element signature="e#9316#10272#0#PHP" expanded="false" />
+            <element signature="n#a#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#9719#10038#0#PHP" expanded="false" />
+            <element signature="e#10041#10255#0#PHP" expanded="false" />
+            <element signature="e#10535#10909#0#PHP" expanded="false" />
+            <element signature="e#10592#10904#0#PHP" expanded="false" />
+            <element signature="e#10683#10898#1#PHP" expanded="false" />
+            <element signature="e#10746#10891#0#PHP" expanded="false" />
+            <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#16446#16675#0#PHP" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#21682#21982#0#PHP" expanded="false" />
+            <element signature="e#21833#21975#0#PHP" expanded="false" />
+            <element signature="e#21987#22202#0#PHP" expanded="false" />
+            <element signature="e#22243#22814#0#PHP" expanded="false" />
+            <element signature="e#22291#22808#0#PHP" expanded="false" />
+            <element signature="e#22384#22728#0#PHP" expanded="false" />
+            <element signature="e#22833#24658#0#PHP" expanded="false" />
+            <element signature="e#23311#23431#1#PHP" expanded="false" />
+            <element signature="e#23450#24190#1#PHP" expanded="false" />
+            <element signature="e#24209#24386#1#PHP" expanded="false" />
+            <element signature="e#24406#24478#1#PHP" expanded="false" />
+            <element signature="n#script#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#24943#26182#0#HTML" expanded="false" />
+            <marker date="1466738979923" expanded="true" signature="643:1147" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="684:1140" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="2254:2275" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="7654:7670" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="12086:12103" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="12238:12328" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="12255:12296" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="12297:12328" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="13072:13102" placeholder="..." />
+            <marker date="1466738979923" expanded="false" signature="13439:13487" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="13474:13487" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="13803:13834" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="14105:14117" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="14269:14272" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="14366:14384" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="15461:15506" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="15507:15533" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="15638:15677" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="15744:15812" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="15787:15812" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="16042:16098" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="16796:16805" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="18563:18684" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="18806:18820" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="18922:18952" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="19526:19556" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="19795:19807" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="19901:19968" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="20195:20262" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="20742:20802" placeholder="..." />
+            <marker date="1466738979923" expanded="true" signature="20871:20889" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8846154">
+          <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/components/bitrix/catalog/category/bitrix/catalog.section/.default/template.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/templates/alfasintez/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5049505">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding>
-            <element signature="e#2282#2653#0#PHP" expanded="false" />
-            <element signature="e#3042#3414#0#PHP" expanded="false" />
-            <element signature="e#3267#3414#0#PHP" expanded="false" />
-            <element signature="e#3741#4237#0#PHP" expanded="false" />
-            <element signature="e#4666#4749#0#PHP" expanded="false" />
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="e#5146#24197#0#PHP" expanded="false" />
-            <element signature="e#5446#6220#0#PHP" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#7335#7639#0#PHP" expanded="false" />
-            <element signature="e#7641#7844#0#PHP" expanded="false" />
-            <element signature="e#7859#8815#0#PHP" expanded="false" />
-            <element signature="n#a#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#8262#8581#0#PHP" expanded="false" />
-            <element signature="e#8584#8798#0#PHP" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#8924#10674#0#PHP" expanded="false" />
-            <element signature="e#8963#10479#0#PHP" expanded="false" />
-            <element signature="e#9078#9452#0#PHP" expanded="false" />
-            <element signature="e#9135#9447#0#PHP" expanded="false" />
-            <element signature="e#9226#9441#1#PHP" expanded="false" />
-            <element signature="e#9289#9434#0#PHP" expanded="false" />
-            <element signature="e#9460#10479#0#PHP" expanded="false" />
-            <element signature="e#9528#9720#0#PHP" expanded="false" />
-            <element signature="e#10184#10451#0#PHP" expanded="false" />
-            <element signature="e#10343#10451#0#PHP" expanded="false" />
-            <element signature="e#10482#10671#0#PHP" expanded="false" />
-            <element signature="e#10702#24178#0#PHP" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#10811#12729#0#PHP" expanded="false" />
-            <element signature="e#10842#11628#0#PHP" expanded="false" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#12015#12729#0#PHP" expanded="false" />
-            <element signature="n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#span#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#12296#12725#0#PHP" expanded="false" />
-            <element signature="n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#12781#14080#0#PHP" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#13137#13699#0#PHP" expanded="false" />
-            <element signature="e#13198#13364#0#PHP" expanded="false" />
-            <element signature="e#13495#13694#0#PHP" expanded="false" />
-            <element signature="e#13718#14060#0#PHP" expanded="false" />
-            <element signature="e#14149#16266#0#PHP" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#14339#14758#0#PHP" expanded="false" />
-            <element signature="e#14396#14753#0#PHP" expanded="false" />
-            <element signature="e#14829#16247#0#PHP" expanded="false" />
-            <element signature="n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#14941#16108#0#PHP" expanded="false" />
-            <element signature="n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#td#0;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#15164#16069#0#PHP" expanded="false" />
-            <element signature="e#15315#15654#0#PHP" expanded="false" />
-            <element signature="n#label#0;n#td#0;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#15673#16069#0#PHP" expanded="false" />
-            <element signature="n#select#0;n#td#0;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#15796#16025#0#PHP" expanded="false" />
-            <element signature="n#script#0;n#div#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#16175#16223#0#HTML" expanded="false" />
-            <element signature="e#16284#17835#0#PHP" expanded="false" />
-            <element signature="e#16498#17093#1#PHP" expanded="false" />
-            <element signature="e#17110#17343#1#PHP" expanded="false" />
-            <element signature="e#17360#17785#1#PHP" expanded="false" />
-            <element signature="n#script#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#18032#24178#0#PHP" expanded="false" />
-            <element signature="e#18042#19484#0#PHP" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#18157#18811#0#PHP" expanded="false" />
-            <element signature="n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#1;n#div#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#19178#19484#0#PHP" expanded="false" />
-            <element signature="n#div#6;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#6;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#7;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#7;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#19986#20590#0#PHP" expanded="false" />
-            <element signature="n#div#8;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#20090#20436#0#PHP" expanded="false" />
-            <element signature="e#20126#20431#0#PHP" expanded="false" />
-            <element signature="e#20440#20570#0#PHP" expanded="false" />
-            <element signature="e#20593#24175#0#PHP" expanded="false" />
-            <element signature="e#20646#24171#0#PHP" expanded="false" />
-            <element signature="n#div#9;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#20800#21017#0#PHP" expanded="false" />
-            <element signature="e#21022#21322#0#PHP" expanded="false" />
-            <element signature="e#21173#21315#0#PHP" expanded="false" />
-            <element signature="e#21327#21542#0#PHP" expanded="false" />
-            <element signature="e#21583#22154#0#PHP" expanded="false" />
-            <element signature="e#21631#22148#0#PHP" expanded="false" />
-            <element signature="e#21724#22068#0#PHP" expanded="false" />
-            <element signature="e#21785#22060#0#PHP" expanded="false" />
-            <element signature="e#22173#23998#0#PHP" expanded="false" />
-            <element signature="e#22651#22771#1#PHP" expanded="false" />
-            <element signature="e#22790#23530#1#PHP" expanded="false" />
-            <element signature="e#23549#23726#1#PHP" expanded="false" />
-            <element signature="e#23746#23818#1#PHP" expanded="false" />
-            <element signature="n#script#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#script#0;n#!!top" expanded="false" />
-            <element signature="e#24283#25522#0#HTML" expanded="false" />
-            <element signature="e#25542#25628#0#PHP" expanded="false" />
-            <marker date="1466722317510" expanded="true" signature="2252:2273" placeholder="..." />
-            <marker date="1466722317510" expanded="false" signature="10291:10307" placeholder="..." />
-            <marker date="1466722317510" expanded="false" signature="13621:13645" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.46817538">
+          <caret line="618" column="16" selection-start-line="618" selection-start-column="16" selection-end-line="618" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
